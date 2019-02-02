@@ -2,24 +2,20 @@
 # Must be the same as `author` in `_config.yml`.
 # Change `author1` to your shortname.
 author1:
-  name: <firstname> <lastname>
-  email: <mail@domain.tld>
+  name: Xuan Vinh Ho
+  email: hxvinh@comp.nus.edu.sg
 
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about: |
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-    Open `_data/authors.yml` to edit this text.
-
-    [Download Free][kit]
-    -- or --
-    [Buy PRO][buy]
-
-    [kit]: https://github.com/qwtel/hydejack-starter-kit/archive/v8.1.1.zip
-    [buy]: https://app.simplegoods.co/i/NATYVLYT
+     I got my Bachelor of Science in Information Technology 
+     in Ho Chi Minh University of Science, Vietnam. 
+     Currently, I am a Master student at the School of Computing, 
+     National University of Singapore. 
+     My major is Computer Science, with research interests 
+     in Machine Learning, Natural Language Processing, Game Theory, 
+     and Bioinformatics. You can find my CV 
+     <a href="https://drive.google.com/file/d/1CAAeJoxBaimKI7sVGqFM6AyH1WAon8Fs/view">here</a>.
 
   # This photo will be used in the about section
   picture:

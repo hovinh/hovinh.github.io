@@ -19,36 +19,34 @@ baseurl: ''
 lang: en
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:                 Hydejack
+title:                 ho xuan vinh
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  "Best Jekyll Theme by a Mile".
-  **Hydejack** is your presence on the web, featuring a blog, portfolio, and resume.
-
+  "computer science, imagination, idea"
+  
 # A shorter description for the sidebar.
-tagline:               '"Best Jekyll Theme by a Mile"'
+tagline:               '"computer science, imagination, idea"'
 
 # A list of keywords for your blog
-keywords: []
+keywords: [machine learning, NLP]
 
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
 # It also used by the `jekyll-seo-tag` plugin.
-logo: /assets/icons/icon.png
+#logo: /assets/icons/icon.png
 
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
-  name: <firstname> <lastname>
-  email: <mail@domain.tld>
+  name: Xuan Vinh Ho
+  email: hxvinh@comp.nus.edu.sg
   # Used by `jekyll-seo-tag`:
   # twitter:             <username>
 
 # This text will appear in a `<small>` tag in the footer of every page.
 copyright: >
   © 2018. All rights reserved.
-  Open `_config.yml` to edit this text.
 
 # Add links to the footer.
 # Typically you'll want to link to your impress, cookies or privacy policy, etc.
@@ -69,7 +67,7 @@ paginate_path: /page-:num/
 # ========================================================================================
 
 # Sidebar image and theme color of the site.
-accent_image: /assets/img/sidebar-bg.jpg
+accent_image: /assets/img/sidebar-bg-vinh.jpg
 accent_color: rgb(79,177,186)
 
 # This is used for the `theme-color` meta tag,
@@ -121,11 +119,11 @@ defaults:
 
 # Set your Google Analytics id to receive `pageview` events.
 # To remove Google Anaylics from your page, remove the line below.
-# google_analytics:      UA-XXXXXXXX-X
+google_analytics:      UA-133713093-1
 
 # Setting a disqus shortname will enable the comment section on
 # pages with `comments: true` in the front matter.
-# disqus:                <disqus_shortname>
+disqus:                ho-xuan-vinh
 
 # Setting a tinyletter username will enable the newsletter subscription box.
 # tinyletter:            <tinyletter_username>
