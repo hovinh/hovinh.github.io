@@ -89,6 +89,19 @@ font_heading: Roboto Slab, Helvetica, Arial, sans-serif
 
 defaults:
   - scope:
+      path: 404.md
+    values:
+      menu: true
+      order: 1
+      
+  - scope:
+      path: 404.md
+    values:
+      menu: true
+      order: 2
+  
+      
+  - scope:
       path: hyde
     values:
       accent_color: rgb(79,177,186)
