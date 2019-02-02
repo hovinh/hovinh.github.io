@@ -175,7 +175,7 @@ hydejack:
 
   # When using Google Analytics, set to `true` to display a cookie notice banner.
   # When enabled, no user-related data will be stored until the user gives consent.
-  cookies_banner: false
+  cookies_banner: true
 
   # Set to `true` if you would like to add a "Powered by Hydejack" link in the footer.
   advertise: false
@@ -260,7 +260,7 @@ plugins:
 # ---------------------------------------------------------------------------------------
 
 # Where you proof that you own this site (used by jekyll-seo-tag)
-# google_site_verification: <verification-id>
+google_site_verification: 1Q8h1atyUsOZSkaLJAZPHYXcAQMJAgyUnIaqxJfjexY
 # -- or --
 # webmaster_verifications:
 #   google:              <verification-id>
