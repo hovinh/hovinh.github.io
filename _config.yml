@@ -91,10 +91,8 @@ defaults:
   - scope:
       path: hyde
     values:
-      accent_color: rgb(38,139,210)
-      accent_image:
-        background: rgb(32,32,32)
-        overlay: false
+      accent_color: rgb(79,177,186)
+      accent_image: /assets/img/sidebar-bg-vinh.jpg
 
   # `jekyll-seo-tag` will mark collection outputs as `BlogPosting`,
   # but we want them to be `WebPage`s:
