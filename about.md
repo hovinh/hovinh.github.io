@@ -69,7 +69,7 @@ Tutor, Programming Methodology, 2018<br>
 Tutor, Software Engineering, 2017<br>
 Tutor, Combinatorial and Graph Algorithms, 2017<br><br>
 <strong> Coursera</strong><br>
-Mentor, Neural Network for Machine Learning, Present<br><br>
+Mentor, Neural Network for Machine Learning, 2018-Present<br><br>
 <strong> Ho Chi Minh University of Science </strong><br>
 TA, Bioinformatics Summer School, 2017
 </p>
