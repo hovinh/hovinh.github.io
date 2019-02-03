@@ -1,184 +1,86 @@
 ---
+title: About
 menu: true
-order: 4
-image: /assets/img/blog/hydejack-8.png
+order: 1
 ---
 
-# About
-## Hydejack
+<span style="font-size:40px;"> Ho Xuan Vinh </span>
 
-The "Best Jekyll Theme by a Mile".
-{:.lead}
+👉 <strong> I'm actively looking for a research/teaching position in both academia and industry.
+If you find my background a good match, please contact me via the email below.
+</strong>
 
-![Screenshot](assets/img/blog/hydejack-8.png){:.lead srcset="/assets/img/blog/hydejack-8.png 1920w, /assets/img/blog/hydejack-8@0,5x.png 960w, /assets/img/blog/hydejack-8@0,25x.png 480w" data-width="1920" data-height="1080"}
-Hydejack's cover page on a variety of screens.
-{:.figure}
+<p><img style="width:250px; float:left; right: 15px; bottom: 5px; top:7px;" src="/assets/img/author.jpg" alt="Ho Xuan Vinh's picture">
+     I got my Bachelor of Science in Information Technology 
+     in Ho Chi Minh University of Science, Vietnam. 
+     Currently, I am a Master student at the School of Computing, 
+     National University of Singapore. 
+     My major is Computer Science, with research interests 
+     in Machine Learning, Natural Language Processing, Game Theory, 
+     and Bioinformatics. You can find my CV 
+     <a href="https://drive.google.com/file/d/1CAAeJoxBaimKI7sVGqFM6AyH1WAon8Fs/view">here</a>. <br> <br>
 
-**Hydejack** is your presence on the web. It gives you a *blog* that is suitable for both prose and technical documentation, a *portfolio* to showcase your projects, and a beautiful *resume* template that looks amazing on the web and in print.
+<strong>Email</strong>: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:hxvinh@comp.nus.edu.sg" target="_top">hxvinh@comp.nus.edu.sg</a> <br>
+<strong>Linkedin</strong>: &nbsp;&nbsp;<a href="https://www.linkedin.com/in/vinh-xuan-ho-25791a71">vn.linkedin.com/in/vinh-xuan-ho</a> <br>
+<strong>Github</strong>: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/hovinh">https://github.com/hovinh</a>
+</p>
+<p style="clear:both;"><br></p>
 
-> Your presence on the web — A [blog], a [portfolio], and a [resume].
-{:.lead}
+<p><span style="font-size:25px; float: left; width: 30%;height: 185px;">Education</span>
+<strong>National University of Singapore, Singapore</strong><br>
+M.Sc., Computer Science, 2017-2019 (expected)<br>
+Algorithmic Transparency <br><br>
+<strong>Ho Chi Minh University of Science, Vietnam</strong><br>
+B.Sc., Information Technology, 2012-2016<br>
+Semantic Labeling, Statistical Machine Translation</p>
+<p style="clear:both;"><br></p>
 
-There are two versions of **Hydejack**: The base version is free, while features that are specific to *professionals* are a payed upgrade.
+<p><span style="font-size:25px; float: left; width: 30%;height: 350px;">Selected Publications</span>
+<strong>Diversity Constraints in Public Housing Allocation.</strong><br>
+Benabbou, N., Chakraborty, M., <span style="font-weight:bold; text-decoration: underline;">Ho, X.V.</span>, Sliwinski, J. & Zick, Y. AAMAS 2018.<br>
+[<a href="https://arxiv.org/pdf/1711.10241.pdf">arxiv</a>]
+[<a href="https://github.com/DataDrivenStrategicCollaborationGroup/AssignmentProblemWithDiversityConstraints">code</a>] <br><br>
+<strong>Evaluating the Semantic Tagset LLOCE</strong><br>
+<span style="font-weight:bold; text-decoration: underline">Ho, X.V.</span>, Thao, N.T.T, Dinh, D.. REV-ECIT 2015<br><br>
+<strong>Deciphering the Entertaining Impact of Pokemon</strong><br>
+<span style="font-weight:bold; text-decoration: underline">Ho, X.V.</span>, Panumate, C., Terillion, J.C., Iida, H. IJERM 2015.<br>
+[<a href="https://www.ijerm.com/vol/Volume-02-Issue-11">journal</a>]
+</p>
+<p style="clear:both;"><br></p>
 
-[**Download Free**][kit]
--- or --
-[**Buy PRO**][buy]
+<p><span style="font-size:25px; float: left; width: 30%;height: 430px;">Research Experience</span>
+<strong>Artificial Intelligence Lab 3, NUS, Singapore</strong><br>
+Master student, 2017-2019<br> <br>
+<strong>Computational Linguistic Center, HCMUS, Vietnam</strong><br>
+Research Assistant, 2016<br><br>
+<strong>Knowledge & Linguistic Engineering Lab, POSTECH, Korea</strong><br>
+Research Assistant, 2016<br><br>
+<strong>Interactive Intelligence Lab, KIT, Japan</strong><br>
+Intern Researcher, 2016<br><br>
+<strong>Entertainment Informatics/Iida Lab, JAIST, Japan</strong><br>
+Intern Researcher, 2015
+</p>
+<p style="clear:both;"><br></p>
 
+<p><span style="font-size:25px; float: left; width: 30%;height: 380px;">Teaching & Mentoring Experience</span>
+<strong> National University of Singapore</strong><br>
+TA, NUS Scale workshop: AI and Future Tech, 2019<br>
+Tutor, Programming Methodology, 2018<br>
+Tutor, Software Engineering, 2017<br>
+Tutor, Combinatorial and Graph Algorithms, 2017<br><br>
+<strong> Coursera</strong><br>
+Mentor, Neural Network for Machine Learning, Present<br><br>
+<strong> Ho Chi Minh University of Science </strong><br>
+TA, Bioinformatics Summer School, 2017
+</p>
+<p style="clear:both;"><br></p>
 
-### A Free Blogging Theme
-**Hydejack** started out as a free blogging theme for Jekyll — and continues to be so.
-
-<!--posts-->
-
-
-### An Impressive Portfolio
-A portfolio that's guaranteed to be impressive — no matter what you put into it.
-
-<!--projects-->
-
-
-### A Printable Resume
-Get a resume that's consistent across the board — whether it's on the web, mobile, print, or [PDF](assets/Resume.pdf).
-
-![Resume PDF](assets/img/blog/resume.png){: data-width="1867" data-height="1389"}
-Front and center page of a print resume generated by Hydejack.
-{:.figure}
-
-
-### Just Markup
-**Hydejack** boasts a plethora of modern JavaScript, but make no mistake: It's still a plain old *web page* at its core. It works without JavaScript, and you can even view it in a text-based browser like `w3m`:
-
-![w3m Screenshot](assets/img/blog/w3m.png){:data-width="1920" data-height="1260"}
-The Hydejack blog, as seen by the text browser `w3m`.
-{:.figure}
-
-
-### Syntax Highlighting
-**Hydejack** features syntax highlighting, powered by [Rouge].
-
-```js
-document.getElementsByTagName("hy-push-state")[0].addEventListener("hy-push-state-load", function() {
-  // <your init code>
-});
-```
-
-
-### Beautiful Math
-They say math is beautiful — and with **Hydejack**'s [math support][latex] it's also guaranteed to *look* beautiful.
-
-![Math Screenshot](assets/img/blog/example-content-iii.jpg){:data-width="1060" data-height="596"}
-Hydejack uses KaTeX to efficiently render math.
-{:.figure}
-
-<!-- $$
-\begin{aligned}
-  \phi(x,y) &= \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right) \\[2em]
-            &= \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j)            \\[2em]
-            &= (x_1, \ldots, x_n)
-               \left(\begin{array}{ccc}
-                 \phi(e_1, e_1)  & \cdots & \phi(e_1, e_n) \\
-                 \vdots          & \ddots & \vdots         \\
-                 \phi(e_n, e_1)  & \cdots & \phi(e_n, e_n)
-               \end{array}\right)
-               \left(\begin{array}{c}
-                 y_1    \\
-                 \vdots \\
-                 y_n
-               \end{array}\right)
-\end{aligned}
-$$ -->
-
-
-### Build an Audience
-The PRO version has built-in support for customizable [Tinyletter] newsletter subscription boxes.
-
-If you are using a different service like MailChimp, you can build a custom newsletter subscription box using [Custom Forms][forms].
-
-
-### A Personal Site That Belongs to You
-**Hydejack** is 100% built on Open Source software, and is Open Source itself, save for parts of the PRO version. The PRO version is a one-time payment that gives you the right to use it forever.
-
-
-### Features
-An incomplete list of features included in all versions of **Hydejack**:
-
-* Full in-app page loading, powered by [hy-push-state]{:.external}
-* Customizable sidebar and touch-enabled drawer menu, powered by [hy-drawer]{:.external}
-* Lazy image loading with cancellation and placeholder, powered by [hy-img]{:.external}
-* Advanced FLIP animations, inspired by Material Design
-* 99/100 [Google PageSpeed Score][gpss][^2]
-* [Syntax highlighting](#syntax-highlighting), powered by [Rouge]
-* [LaTeX math blocks][latex], powered by [KaTeX]
-* Change the wording of built-in strings and possibly translate in other languages
-* Support for categories and tags
-* Built-in icons for many social networks
-* Simple and semantic HTML
-* Structured Data for core entities
-* Author section below each article and support for multiple authors
-* Google Analytics and Google Fonts support
-* Disqus comments
-
-
-### Download
-There are two versions of **Hydejack**: The *free version* includes basic blogging functionality, as did previous versions of the theme.
-The *PRO version* includes additional features for professionals:
-A [portfolio], a [resume] layout, and a [welcome] page to highlight your favorite projects and posts.
-
-This table below shows what's included in each version:
-
-|                        | Free           | PRO      |
-|:-----------------------|:--------------:|:--------:|
-| Blog                   | &#x2714;       | &#x2714; |
-| [Features]             | &#x2714;       | &#x2714; |
-| [Portfolio]            |                | &#x2714; |
-| [Resume]               |                | &#x2714; |
-| [Welcome]              |                | &#x2714; |
-| [Newsletter Box][news] |                | &#x2714; |
-| [Custom Forms][forms]  |                | &#x2714; |
-| Dark Mode              |                | &#x2714; |
-| Cookie Banner          |                | &#x2714; |
-| Offline Support        |                | &#x2714; |
-| No Hydejack Branding   |                | &#x2714; |
-| License                | [GPL-3.0][lic] | [PRO]    |
-| Source                 | [GitHub][src]  | Included |
-| Support[^1]            | No             | No       |
-| Price                  | Free           | $59      |
-| | [**Download**][kit] | [**Buy PRO**][buy] |
-{:.stretch-table.dl-table}
-
-[^1]: You MAY open an issue on GitHub, but no response and/or fix is guaranteed.
-      You understand that using Jekyll requires technical know-how and is not comparable to Wordpress in terms of ease of use. Please use the free version to confirm that Hydejack works for you. For details, see the [PRO] license.
-
-[^2]: Actual page load speed depends on your hosting provider, resolution of embedded images and usage of 3rd party plugins.
-
-[blog]: https://hydejack.com/blog/
-[portfolio]: https://hydejack.com/projects/
-[resume]: https://hydejack.com/resume/
-[download]: https://hydejack.com/download/
-[welcome]: https://hydejack.com/
-[forms]: https://hydejack.com/forms-by-example/
-
-[features]: #features
-[news]: #build-an-audience
-[syntax]: #syntax-highlighting
-[latex]: hydejack/_posts/2018-06-01-example-content-iii.md#math
-
-[lic]: LICENSE.md
-[pro]: licenses/PRO.md
-[docs]: docs/README.md
-
-[kit]: https://github.com/qwtel/hy-starter-kit/archive/v8.1.1.zip
-[src]: https://github.com/qwtel/hydejack
-[gem]: https://rubygems.org/gems/jekyll-theme-hydejack
-[buy]: https://app.simplegoods.co/i/NATYVLYT
-
-[gpss]: https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fhydejack.com%2F
-[hy-push-state]: https://qwtel.com/hy-push-state/
-[hy-drawer]: https://qwtel.com/hy-drawer/
-[hy-img]: https://qwtel.com/hy-img/
-[rouge]: http://rouge.jneen.net
-[katex]: https://khan.github.io/KaTeX/
-[tinyletter]: https://tinyletter.com/
-
-*[FLIP]: First-Last-Invert-Play. A coding technique to achieve performant page transition animations.
+<p><span style="font-size:25px; float: left; width: 30%;height: 430px;">Honors and Awards</span>
+<ul>
+	<li> Travel grant scholarship for <strong>Best Accepted Paper</strong> to attend “Ethics of Data Science” conference, Sydney,
+2019.</li>
+	<li> <strong>Best Student Paper Award</strong>, Youth Conference IV-2016, VNU-HCMUIT.</li>
+	<li> 2015 & 2016 Japan Student Services Organization (JASSO) scholarship. </li>
+	<li> 2015 Sunflower Mission Engineering and Technology Scholarship.</li>
+</ul>
+</p>

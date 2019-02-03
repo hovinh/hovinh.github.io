@@ -29,6 +29,8 @@ GEM
       pathutil (~> 0.9)
       rouge (>= 1.7, < 4)
       safe_yaml (~> 1.0)
+    jekyll-avatar (0.6.0)
+      jekyll (~> 3.0)
     jekyll-default-layout (0.1.4)
       jekyll (~> 3.0)
     jekyll-feed (0.11.0)
@@ -77,6 +79,7 @@ GEM
       concurrent-ruby (~> 1.0)
     tzinfo-data (1.2018.9)
       tzinfo (>= 1.0.0)
+    wdm (0.1.1)
 
 PLATFORMS
   ruby
@@ -84,6 +87,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll
+  jekyll-avatar
   jekyll-default-layout
   jekyll-feed
   jekyll-optional-front-matter
@@ -95,6 +99,7 @@ DEPENDENCIES
   jekyll-sitemap
   jekyll-titles-from-headings
   tzinfo-data
+  wdm (>= 0.1.0)
 
 BUNDLED WITH
    1.16.1

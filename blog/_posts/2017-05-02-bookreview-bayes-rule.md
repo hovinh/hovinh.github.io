@@ -1,0 +1,40 @@
+---
+#layout: post
+title: Bayes' Rule A Tutorial Introduction to Bayesian Analysis - James V Stone
+description: >
+  Review of the book "Bayes' Rule A Tutorial Introduction to Bayesian Analysis", authored by James V Stone.
+author: author1
+comments: true
+---
+
+Last week was such an unforgettable experience, thus I want to get my hand dirty right away to prepare a solid foundation for the ahead journey. And there is nothing better to start with than one of James V Stone's books: <a href="https://www.amazon.com/Bayes-Rule-Tutorial-Introduction-Bayesian/dp/0956372848">Bayes' Rule A Tutorial Introduction to Bayesian Analysis</a>.
+
+This book review is about my overall evaluation after finishing the book. In addition, not only do I summarise the key ideas in each chapter to provide more insightful of the lessons I have learned, but I also try to share my thought relating to personal experience. The book consists of 7 chapters, which I spent 1-2 hours for one chapter per day, though the contents vary in difficulty level and some require basic prior knowledge about probability. 
+
+Do not fear my friend, I can tell you that this book is not a novel kind to read when you seek for a place to relax your mind, but it is definitely a good choice for one who wonders where to start with Bayesian thingy. As pointed out right from the beginning, the author chooses the bottom-up approach, which means showing examples first before coming to any general conclusion. This requires some repetition which might annoy intermediate level audiences, but a necessary step to clear any doubts before discussing any deeper topics. I do not see it as a burden, in fact, I am very appreciated for the author's effort to explain everything plainly in a tradeoff for the book's wide broad of target audiences. Overall, this book merely covers a tip of the iceberg. However, it provides a guide to where we should follow next in the Appendix, which is reasonable for a tutorial with 170 pages. No need to wait, next I will summarise the chapters one by one and hope this turns out to be useful for you.
+
+**Chapter 1** first introduces an informal notion of probability in general, comes along with an intuitive Bayesian inference to solve 3 toy problems. Though it is trivial, this puts up an interesting question: "Do we make reasonable decisions in daily life by asking the right question?". By re-introducing the same problem in variable domains, this naturally leads to a gradual comprehension, which is well enough to differentiate the meaning between *likelihood* and a *posterior*. It shows that, at first glance, people make decision associated with *maximum likelihood estimation* (MLE), whereas a more correct way is observing the *maximum a posteriori* (MAP). 4 main factors in Bayes' Rule (equation at below) and inverse probability reasoning(an important part) are well-defined right after that to ensure the audiences do not miss anything.
+
+$$ 
+\begin{aligned}
+posterior &= \frac{likelihood \: \times \: prior}{marginal \: likelihood} \\[0em]
+\end{aligned}
+$$
+
+One picture is worth a thousand words, and in **Chapter 2**, the author literally did it. By putting $$ marginal \: likelihood $$ of parameter $$ \phi $$ and observed data $$ x $$ together to form the geometric area of joint probability $$ p(x,\phi)$$, a more insightful understanding of how to find conditional probability $$ p(\phi \vert x)$$ and $$ p(x \vert \phi)$$, corresponding to $$ posterior $$ and $$ likelihood $$ respectively, are gained. It is a proof that, in mathematics' perspective, if all required data are available then you can treat $$ p(\phi \vert x)$$ and $$ p(x \vert \phi)$$ in the exactly same way. However,  their meanings are totally different. Furthermore, joint probability is rarely found in practice, thus one probability is easily obtained whereas the other one must be deduced via $$ prior $$. Unfortunately, the seeking answer is the second one.
+
+The warrior who was equipped with shining armour and weapon is ready to slay the dragon. So far the possible outcome of considered parameter is only two, and **Chapter 3** pushes it further where parameter could take multiple values. Basically, all learned knowledge would apply on the discrete parameter value, provided with 5 typical questions in order to show audience exact way to calculate desired probabilities. Also, Bayes' Rule now has a solid proof based on product rule on joint probability $$ p(x,\phi) $$.
+
+One step further than discrete is continuous, **Chapter 4** basically did the same thing but it sheds some light on analytics perspective thanks to the power of calculus. Imagine you have to test every single value of the parameter to find the most probable parameter, instead of knowing where to find it right away and save the time for your favourite coffee. It is no magic than the first derivative of the probability function of $$ posterior $$. Besides that, a simple yet amazing technique is introduced to calculate $$ posterior $$ on the fly when keep updating newly observed data. This, I suspect, how spam filter works to improve its ability to detect a suspicious email. One last thing, even though MAP is the one we desired for, in some circumstances when strong assumptions are valid to make, MLE could be used to approximate it with an implicit uniform prior probability distribution.
+
+**Chapter 5** is one of my favourites, especially if you are interested in applying this theory into Machine Learning. Given a set of data points, the question is how to find a regression line that fits them best. The author takes the scale and intercept of the line as a parameter, and throughout a chain of deduction, the MAP turns out to be nothing other than Least Square Estimate (LSE), or more familiar with the name Least Square Error. If one puts more thinking on this, she may come up with an algorithm herself to find the regression line. How obvious is it!!!
+
+**Chapter 6** plots the joint probability distribution with one more dimension - density. To be honest, I do not fully understand the concept here, but it reminds me of a story. Back in high school, the teacher asked us to approximate bias of one coin by flipping and recording the number of heads/tails. If you understand at least up to Chapter 2, we can see that there is a big loop here when the question is $$ p(\phi \vert x)$$, but we were asked to approximate with $$ p(x \vert \phi)$$. In fact, this approach is true if and only if the data $$x$$ and parameter $$ \phi $$ are correlated in some manner. Otherwise, if data and parameter are independent, the only way to make this true is assuming $$ prior $$ is a uniform probability distribution.
+
+**Chapter 7** tells a different yet interesting story as well. It is about the resurrection of Bayesian methods in the 20th century, the non-exhausted war between Bayesians and frequentists, and so on...  I would not spoil the content here because it is so exciting to know a theory can reflect a life philosophy.
+
+I do my best to interpret the content of the book, thus much detailed information was skipped such as Gaussian distribution, ignorance in marginal likelihood... And you know where to find them, aren't you?
+
+The purpose of this review is an insignificant effort to support for this book. However, the book could not satisfy one question of mine: "How can one comes up with an algorithm based on generated stories?". I keep having it in mind because I saw people used Bayes' Rule in Statistical Machine Translation task, and I can not answer it (and maybe the question is not clear enough to most of you, I myself also quite confused whether is it a right one or not).
+
+To be fair, the book does not cover this topic so you should take it no more than a personal opinion. I put it here because I thought someone may share the same interest with me. Hope you find this motivate you in getting to know more about Bayesian Analysis.
