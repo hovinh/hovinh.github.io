@@ -10,7 +10,7 @@ order: 1
 If you find my background a good match, please contact me via the email below.
 </strong>
 
-<p><img style="width:230px; float:left; margin-right: 10px; bottom: 5px; top:7px;" src="/assets/img/author.jpg" alt="Ho Xuan Vinh's picture">
+<p><img style="width:230px; float:left; margin-right: 10px; top:10px;" src="/assets/img/author.jpg" alt="Ho Xuan Vinh's picture">
      I got my Bachelor of Science in Information Technology 
      in Ho Chi Minh University of Science, Vietnam. 
      Currently, I am a Master student at the School of Computing, 
@@ -18,7 +18,7 @@ If you find my background a good match, please contact me via the email below.
      My major is Computer Science, with research interests 
      in Machine Learning, Natural Language Processing, Game Theory, 
      and Bioinformatics. You can find my CV 
-     <a href="https://drive.google.com/file/d/1CAAeJoxBaimKI7sVGqFM6AyH1WAon8Fs/view">here</a>. <br> <br>
+     <a href="https://drive.google.com/file/d/1CAAeJoxBaimKI7sVGqFM6AyH1WAon8Fs/view">here</a>. <br> 
 
 <strong>Email</strong>: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:hxvinh@comp.nus.edu.sg" target="_top">hxvinh@comp.nus.edu.sg</a> <br>
 <strong>Linkedin</strong>: &nbsp;&nbsp;<a href="https://www.linkedin.com/in/vinh-xuan-ho-25791a71">vn.linkedin.com/in/vinh-xuan-ho</a> <br>
