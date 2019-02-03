@@ -10,7 +10,7 @@ order: 1
 If you find my background a good match, please contact me via the email below.
 </strong>
 
-<p><img style="width:250px; float:left; right: 15px; bottom: 5px; top:7px;" src="/assets/img/author.jpg" alt="Ho Xuan Vinh's picture">
+<p><img style="width:250px; float:left; right: 30px; bottom: 5px; top:7px;" src="/assets/img/author.jpg" alt="Ho Xuan Vinh's picture">
      I got my Bachelor of Science in Information Technology 
      in Ho Chi Minh University of Science, Vietnam. 
      Currently, I am a Master student at the School of Computing, 
@@ -62,7 +62,7 @@ Intern Researcher, 2015
 </p>
 <p style="clear:both;"><br></p>
 
-<p><span style="font-size:25px; float: left; width: 30%;height: 380px;">Teaching & Mentoring Experience</span>
+<p><span style="font-size:25px; float: left; width: 30%;height: 350px;">Teaching & Mentoring Experience</span>
 <strong> National University of Singapore</strong><br>
 TA, NUS Scale workshop: AI and Future Tech, 2019<br>
 Tutor, Programming Methodology, 2018<br>
