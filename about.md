@@ -10,7 +10,7 @@ order: 1
 If you find my background a good match, please contact me via the email below.
 </strong>
 
-<p><img style="width:250px; float:left; margin: 30px; bottom: 5px; top:7px;" src="/assets/img/author.jpg" alt="Ho Xuan Vinh's picture">
+<p><img style="width:250px; float:left; margin-right: 30px; bottom: 5px; top:7px;" src="/assets/img/author.jpg" alt="Ho Xuan Vinh's picture">
      I got my Bachelor of Science in Information Technology 
      in Ho Chi Minh University of Science, Vietnam. 
      Currently, I am a Master student at the School of Computing, 

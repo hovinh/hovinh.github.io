@@ -5,7 +5,7 @@ order: 3
 ---
 
 <p>
-<img style="float:left; right: 30px; width: 150px;" src="\assets\img\projects\project-algotransparency.jpg" alt="Project Algorithmic Transparency">
+<img style="float:left; margin-right: 30px; width: 150px;" src="\assets\img\projects\project-algotransparency.jpg" alt="Project Algorithmic Transparency">
 <strong>Layered Explanations: Interpreting Neural Networks with Numerical Influence Measures</strong><br>
 Deep learning is currently receiving considerable attention from the
 machine learning community due to its predictive power. However,
@@ -20,7 +20,7 @@ explanations.
 </p>
 <br>
 <p>
-<img style="float:left; right: 30px; width: 150px;" src="\assets\img\projects\project-hdb.jpg" alt="Project HDB">
+<img style="float:left; margin-right: 30px; width: 150px;" src="\assets\img\projects\project-hdb.jpg" alt="Project HDB">
 <strong>Diversity constraints on Public Housing Allocation in Singapore </strong><br>
 The state of Singapore employs a unique large-scale public housing program, accounting for over 80 percent of its residential real-estate. In addition to providing a social benefit to its citizens and permanent residents in the form of subsidized housing, Singapore uses its housing allocation program to ensure ethnic diversity in its neighborhoods; however, limiting people's ability to freely choose apartments incurs some welfare loss. Our work studies this problem via the computational economics lens. </p>
 <br>
@@ -31,7 +31,7 @@ Vietnamese and Korean are a language pair sharing many common semantic concepts 
 </p>
 <br>
 <p>
-<img style="float:left; margin: 30px; width: 150px;" src="\assets\img\projects\project-wordnet.jpg" alt="Project Wordnet">
+<img style="float:left; margin-right: 30px; width: 150px;" src="\assets\img\projects\project-wordnet.jpg" alt="Project Wordnet">
 <strong>Building Vietnamese WordNet-annotated corpus for advanced tasks in NLP</strong><br>
 With available WordNet annotated corpus in English side, one can use aligments provided by GIZA toolkit to project the WordNet tags into Vietnamese side. Once this goal achieved, the new generated corpus is expected to contain many useful semantic information such that the SMT system could reach a better performance. The problem is that alignments vary in many forms: 1-1, 1-n, m-1, and m-n. Thus, we proposed some heuristics in combining ovelapped alignments in order to obtain the best projection result, which is then evaluated on a hand-labeled test set.
 </p>
