@@ -29,8 +29,10 @@ Welcome to my professional <a href="http://hovinh.github.io">webpage</a>. I fork
     ```
     - Open browser, e.g. Chrome, and enter *http://localhost:4000* to the address bar.
 
-    - You can try modify my page and refresh browser to see the changes take effect. Thanks to *--inceremental* parameter, it usually takes 3 seconds to rebuild the page. 
+    - You can try to modify my page and refresh browser to see the changes take effect. Thanks to *--inceremental* parameter, it usually takes 3 seconds to rebuild the page. 
 
-    > **NOTE**: The auto-generated site is located in *_site* directory. To add new content, it must not be inside this directory. If you add/remove a new page, you should 1) interrupt terminal, 2) delete *_site* directory, then 3) rerun terminal again.  
+    > **NOTE**: The auto-generated site is located in *_site* directory. To add new content, it must not be inside this directory. If you add/remove a new page, you should 1) interrupt terminal, 2) delete *_site* directory, then 3) rerun *jekyll serve --incremental* again.  
+3. Have fun!
+    >**NOTE**: before commiting and pushing to Github, remember to remodify *Gemfile*.
 
 Please leave a star if you find this repo helpful.
