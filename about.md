@@ -51,9 +51,9 @@ Benabbou, N., Chakraborty, M., <span style="font-weight:bold; text-decoration: u
 <p><span style="font-size:25px; float: left; width: 30%;height: 430px;">Research Experience</span>
 <strong>Artificial Intelligence Lab 3, NUS, Singapore</strong><br>
 Master student, 2017-2019<br> <br>
-<strong>Computational Linguistic Center, HCMUS, Vietnam</strong><br>
+<strong>Computational Linguistics Center, HCMUS, Vietnam</strong><br>
 Research Assistant, 2016<br><br>
-<strong>Knowledge & Linguistic Engineering Lab, POSTECH, Korea</strong><br>
+<strong>Knowledge & Language Engineering Lab, POSTECH, Korea</strong><br>
 Research Assistant, 2016<br><br>
 <strong>Interactive Intelligence Lab, KIT, Japan</strong><br>
 Intern Researcher, 2016<br><br>
