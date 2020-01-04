@@ -16,6 +16,7 @@ Welcome to my professional <a href="http://hovinh.github.io">webpage</a>. I fork
     - Install Jekyll: open Terminal/Command Prompt and input: 
     ```powershell
     gem install jekyll
+    gem install bundler:1.16.1
     ```
     - Move to the  downloaded repo, where *_config.yml* is located, open *Gemfile* and modify:
     ```powershell

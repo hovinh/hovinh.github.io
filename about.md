@@ -6,19 +6,20 @@ order: 1
 
 <span style="font-size:40px;"> Ho Xuan Vinh </span>
 
+<!-- 
 👉 <strong> I'm actively looking for a research/teaching position in both academia and industry.
 If you find my background a good match, please contact me via the email below.
 </strong>
+-->
 
 <p><img style="width:230px; float:left; margin-right: 10px; top:10px;" src="/assets/img/author.jpg" alt="Ho Xuan Vinh's picture">
-     I got my Bachelor of Science in Information Technology 
-     in Ho Chi Minh University of Science, Vietnam. 
-     Currently, I am a Master student at the School of Computing, 
-     National University of Singapore. 
-     My major is Computer Science, with research interests 
-     in Machine Learning, Natural Language Processing, Game Theory, 
+     I had a Master of Science degree in Computer Science (School of Computing, NUS, Singapore)
+     and a Bachelor of Science degree in Information Technology (Ho Chi Minh University of Science, VNU, Vietnam). 
+     Currently, I am a Data Scientist at Smart Manufacturing & AI team, Micron Technology (Singapore). 
+     My research interests are unbounded, but I'm particularly interested in 
+     Machine Learning, Natural Language Processing, Game Theory, 
      and Bioinformatics. You can find my CV 
-     <a href="https://drive.google.com/file/d/1CAAeJoxBaimKI7sVGqFM6AyH1WAon8Fs/view">here</a>. <br> 
+     <a href="https://drive.google.com/open?id=1JrJLy5GnOLpsR_v36odNXDg66qqGjozi">here</a>. <br> 
 
 <strong>Email</strong>: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:hxvinh@comp.nus.edu.sg" target="_top">hxvinh@comp.nus.edu.sg</a> <br>
 <strong>Linkedin</strong>: &nbsp;&nbsp;<a href="https://www.linkedin.com/in/vinh-xuan-ho-25791a71">vn.linkedin.com/in/vinh-xuan-ho</a> <br>
@@ -28,11 +29,17 @@ If you find my background a good match, please contact me via the email below.
 
 <p><span style="font-size:25px; float: left; width: 30%;height: 185px;">Education</span>
 <strong>National University of Singapore, Singapore</strong><br>
-M.Sc., Computer Science, 2017-2019 (expected)<br>
+M.Sc., Computer Science, 2017-2019<br>
 Algorithmic Transparency <br><br>
 <strong>Ho Chi Minh University of Science, Vietnam</strong><br>
 B.Sc., Information Technology, 2012-2016<br>
 Semantic Labeling, Statistical Machine Translation</p>
+<p style="clear:both;"><br></p>
+
+<p><span style="font-size:25px; float: left; width: 30%;height: 185px;">Working Experience</span>
+<strong>Micron Technology, Singapore</strong><br>
+Data Scientist, 2019-Present<br>
+</p>
 <p style="clear:both;"><br></p>
 
 <p><span style="font-size:25px; float: left; width: 30%;height: 350px;">Selected Publications</span>
@@ -75,7 +82,7 @@ TA, Bioinformatics Summer School, 2017
 </p>
 <p style="clear:both;"><br></p>
 
-<p><span style="font-size:25px; float: left; width: 30%;height: 430px;">Honors and Awards</span>
+<p><span style="font-size:25px; float: left; width: 30%;height: 430px;">Honors & Awards</span>
 <ul>
 	<li> Travel grant scholarship for <strong>Best Accepted Paper</strong> to attend “Ethics of Data Science” conference, Sydney,
 2019.</li>
