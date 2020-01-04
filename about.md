@@ -6,11 +6,6 @@ order: 1
 
 <span style="font-size:40px;"> Ho Xuan Vinh </span>
 
-<!-- 
-👉 <strong> I'm actively looking for a research/teaching position in both academia and industry.
-If you find my background a good match, please contact me via the email below.
-</strong>
--->
 
 <p><img style="width:230px; float:left; margin-right: 10px; top:10px;" src="/assets/img/author.jpg" alt="Ho Xuan Vinh's picture">
      I had a Master of Science degree in Computer Science (School of Computing, NUS, Singapore)
