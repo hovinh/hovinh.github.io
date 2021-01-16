@@ -15,7 +15,7 @@ order: 1
      My research interests are unbounded, but I'm particularly interested in 
      Machine Learning, Natural Language Processing, Game Theory, 
      and Bioinformatics. You can find my CV 
-     <a href="https://drive.google.com/open?id=1JrJLy5GnOLpsR_v36odNXDg66qqGjozi">here</a>. <br> 
+     <a href="https://drive.google.com/file/d/1YH2Cw4ev3e-tS6QS-k6jMG2aUzlVDo6Z/view?usp=sharing">here</a>. <br> 
 
 <strong>Email</strong>: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:hxvinh@comp.nus.edu.sg" target="_top">hxvinh@comp.nus.edu.sg</a> <br>
 <strong>Linkedin</strong>: &nbsp;&nbsp;<a href="https://www.linkedin.com/in/vinh-xuan-ho-25791a71">vn.linkedin.com/in/vinh-xuan-ho</a> <br>
@@ -38,7 +38,16 @@ Data Scientist, 2019-Present<br>
 </p>
 <p style="clear:both;"><br></p>
 
-<p><span style="font-size:25px; float: left; width: 30%;height: 350px;">Selected Publications</span>
+<p><span style="font-size:25px; float: left; width: 30%;height: 950px;">Publications</span>
+<strong>The Price of Quota-based Diversity in Assignment Problems.</strong><br>
+Benabbou, N., Chakraborty, M., <span style="font-weight:bold; text-decoration: underline;">Ho, X.V.</span>, Sliwinski, J. & Zick, Y. TEAC 2020, volume 8, issue 3, pages 1-32.<br>
+[<a href="https://drive.google.com/file/d/1vLgiUDyeK3BMDhZetXqts8NdAe1xHWXU/view">paper</a>]<br><br>
+<strong>Un Problème d’Affectation avec des Contraintes de Diversité : Complexité et Prix de la Diversité .</strong><br>
+Benabbou, N., Chakraborty, M., <span style="font-weight:bold; text-decoration: underline;">Ho, X.V.</span>, Sliwinski, J. & Zick, Y. ROADEF 2019.<br>
+[<a href="https://drive.google.com/file/d/1vO2axKNbeXNfbowum9myjUEQOcbJcyQT/view">paper</a>]<br><br>
+<strong>The Assignment Problem with Diversity Constraints with an application to Ethnic Integration in Public Housing.</strong><br>
+Benabbou, N., Chakraborty, M., <span style="font-weight:bold; text-decoration: underline;">Ho, X.V.</span>, Sliwinski, J. & Zick, Y. COMSOC 2018.<br>
+[<a href="https://drive.google.com/file/d/1mkjuZKw6GQ5MEjicXEBwp9fKLUoxSLtd/view">paper</a>]<br><br>
 <strong>Diversity Constraints in Public Housing Allocation.</strong><br>
 Benabbou, N., Chakraborty, M., <span style="font-weight:bold; text-decoration: underline;">Ho, X.V.</span>, Sliwinski, J. & Zick, Y. AAMAS 2018.<br>
 [<a href="https://arxiv.org/pdf/1711.10241.pdf">arxiv</a>]
