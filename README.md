@@ -28,6 +28,8 @@ Welcome to my professional <a href="http://hovinh.github.io">webpage</a>. I fork
     bundle install
     jekyll serve --incremental
     ```
+    > **NOTE**: If failed, you may try *bundle exec jekyll serve --incremental*.  
+
     - Open browser, e.g. Chrome, and enter *http://localhost:4000* to the address bar.
 
     - You can try to modify my page and refresh browser to see the changes take effect. Thanks to *--inceremental* parameter, it usually takes 3 seconds to rebuild the page. 
@@ -35,5 +37,13 @@ Welcome to my professional <a href="http://hovinh.github.io">webpage</a>. I fork
     > **NOTE**: The auto-generated site is located in *_site* directory. To add new content, it must not be inside this directory. If you add/remove a new page, you should 1) interrupt terminal, 2) delete *_site* directory, then 3) rerun *jekyll serve --incremental* again.  
 3. Have fun!
     >**NOTE**: before commiting and pushing to Github, remember to remodify *Gemfile*.
+
+# How my page is organized
+- `assets`: contains images used.
+- `_data`: contains `authors.yml` showing author profile.
+- `blog\_posts`: contains the raw content of new posts.
+- `about.md`: content of About's page.
+- `news.md`: content of News' page.
+
 
 Please leave a star if you find this repo helpful.
