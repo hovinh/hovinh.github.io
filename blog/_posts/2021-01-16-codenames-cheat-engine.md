@@ -1,5 +1,5 @@
 ---
-layout: post
+#layout: post
 title: Breaking the Codenames' code, or a fun Semi-Turing test
 description: >
   A fun experiment to legitimately win the Codenames boardgame with an optimal solution that appears humanly acceptable from other participants' perspective.
