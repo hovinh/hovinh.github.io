@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en"><!--
+ __  __                __                                     __
+/\ \/\ \              /\ \             __                    /\ \
+\ \ \_\ \   __  __    \_\ \      __   /\_\      __       ___ \ \ \/'\
+ \ \  _  \ /\ \/\ \   /'_` \   /'__`\ \/\ \   /'__`\    /'___\\ \ , <
+  \ \ \ \ \\ \ \_\ \ /\ \L\ \ /\  __/  \ \ \ /\ \L\.\_ /\ \__/ \ \ \\`\
+   \ \_\ \_\\/`____ \\ \___,_\\ \____\ _\ \ \\ \__/.\_\\ \____\ \ \_\ \_\
+    \/_/\/_/ `/___/> \\/__,_ / \/____//\ \_\ \\/__/\/_/ \/____/  \/_/\/_/
+                /\___/                \ \____/
+                \/__/                  \/___/
+
+Powered by Hydejack v8.2.0 <https://hydejack.com/>
+-->
+
+
+
+
+
+
+
+
+
+
+
+<head>
+  
+
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+
+  
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Probabilistic Graphical Model 1 (Representation) - A note on Programming Assignments | ho xuan vinh</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Probabilistic Graphical Model 1 (Representation) - A note on Programming Assignments" />
+<meta name="author" content="Xuan Vinh Ho" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="A guide to complete Probablistic Graphical Model 1 (Representation), a Coursera course taught by Prof. Daphne Koller." />
+<meta property="og:description" content="A guide to complete Probablistic Graphical Model 1 (Representation), a Coursera course taught by Prof. Daphne Koller." />
+<link rel="canonical" href="http://localhost:4000/blog/2019-12-25-pgm-programming-assignments/" />
+<meta property="og:url" content="http://localhost:4000/blog/2019-12-25-pgm-programming-assignments/" />
+<meta property="og:site_name" content="ho xuan vinh" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-12-25T00:00:00+08:00" />
+<meta name="google-site-verification" content="1Q8h1atyUsOZSkaLJAZPHYXcAQMJAgyUnIaqxJfjexY" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/blog/2019-12-25-pgm-programming-assignments/","headline":"Probabilistic Graphical Model 1 (Representation) - A note on Programming Assignments","dateModified":"2019-12-25T00:00:00+08:00","datePublished":"2019-12-25T00:00:00+08:00","author":{"@type":"Person","name":"Xuan Vinh Ho"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2019-12-25-pgm-programming-assignments/"},"description":"A guide to complete Probablistic Graphical Model 1 (Representation), a Coursera course taught by Prof. Daphne Koller.","@type":"BlogPosting","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  
+    <meta name="keywords" content="machine learning,NLP">
+  
+
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="ho xuan vinh">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<meta name="application-name" content="ho xuan vinh">
+<meta name="msapplication-config" content="/assets/ieconfig.xml">
+
+
+<meta name="theme-color" content="rgb(25,55,71)">
+
+
+<meta name="generator" content="Hydejack v8.2.0" />
+
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="ho xuan vinh" />
+
+
+
+<link rel="alternate" href="http://localhost:4000/blog/2019-12-25-pgm-programming-assignments/" hreflang="en">
+
+<link rel="shortcut icon" href="/assets/icons/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/icons/icon.png">
+
+<link rel="manifest" href="/assets/manifest.json">
+
+
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+
+
+
+<link rel="dns-prefetch" href="/" id="_baseURL">
+<link rel="dns-prefetch" href="/assets/js/hydejack-8.2.0.js" id="_hrefJS">
+<link rel="dns-prefetch" href="/sw.js" id="_hrefSW">
+<link rel="dns-prefetch" href="/assets/bower_components/fontfaceobserver/fontfaceobserver.standalone.js" id="_hrefFFO">
+<link rel="dns-prefetch" href="/assets/bower_components/katex/dist/katex.min.js" id="_hrefKatexJS">
+<link rel="dns-prefetch" href="/assets/bower_components/katex/dist/katex.min.css" id="_hrefKatexCSS">
+<link rel="dns-prefetch" href="/assets/img/swipe.svg" id="_hrefSwipeSVG">
+
+
+
+<link rel="dns-prefetch" href="https://ho-xuan-vinh.disqus.com" id="_hrefDisqus">
+
+
+<script>!function(e,t){"use strict";function n(e,t,n,r){e.addEventListener?e.addEventListener(t,n,r):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n}e.loadJS=function(e,r){var o=t.createElement("script");o.src=e,r&&n(o,"load",r,{once:!0});var a=t.scripts[0];return a.parentNode.insertBefore(o,a),o},e._loaded=!1,e.loadJSDeferred=function(r,o){function a(){e._loaded=!0,o&&n(d,"load",o,{once:!0});var r=t.scripts[0];r.parentNode.insertBefore(d,r)}var d=t.createElement("script");return d.src=r,e._loaded?a():n(e,"load",a,{once:!0}),d},e.setRel=e.setRelStylesheet=function(e){function n(){this.rel="stylesheet"}var r=t.getElementById(e);r.addEventListener?r.addEventListener("load",n,{once:!0}):r.onload=n}}(window,document);
+!function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
+!function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+</script>
+
+<script>!function(w, d) {
+    w._noPushState = false;
+    w._noDrawer = false;
+
+    /**/
+    loadJS(d.getElementById('_hrefFFO').href, function() {
+      if ('Promise' in w) Promise.all([
+        new FontFaceObserver('Noto Sans').load(),
+        new FontFaceObserver('Roboto Slab').load(),
+      ]).then(function f() { d.body.classList.add('font-active'); }, function() {});
+    });
+    /**/
+}(window, document);</script>
+
+<!--[if gt IE 8]><!---->
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="/assets/css/hydejack-8.2.0.css">
+  <link rel="stylesheet" href="/assets/icomoon/style.css">
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400|Noto+Sans:400,400i,700,700i">
+    <noscript>
+      <style>
+        html { font-family: Noto Sans, Helvetica, Arial, sans-serif!important; }
+        h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading { font-family: Roboto Slab, Helvetica, Arial, sans-serif!important; }
+      </style>
+    </noscript>
+  
+
+
+<style id="_pageStyle">
+.content a:not(.btn){color:#4fb1ba;border-color:rgba(79,177,186,0.2)}.content a:not(.btn):hover{border-color:#4fb1ba}:focus{outline-color:#4fb1ba !important}.btn-primary{color:#fff;background-color:#4fb1ba;border-color:#4fb1ba}.btn-primary:focus,.btn-primary.focus,.form-control:focus,.form-control.focus{box-shadow:0 0 0 3px rgba(79,177,186,0.5)}.btn-primary:hover,.btn-primary.hover{color:#fff;background-color:#409ba3;border-color:#409ba3}.btn-primary:disabled,.btn-primary.disabled{color:#fff;background-color:#4fb1ba;border-color:#4fb1ba}.btn-primary:active,.btn-primary.active{color:#fff;background-color:#409ba3;border-color:#409ba3}::selection{color:#fff;background:#4fb1ba}::-moz-selection{color:#fff;background:#4fb1ba}
+
+</style>
+
+<!--<![endif]-->
+
+
+
+
+</head>
+
+<body>
+  <div id="_navbar" class="navbar fixed-top">
+  <div class="content">
+    <div class="nav-btn-bar">
+      <span class="sr-only">Jump to:</span>
+      <a id="_menu" class="nav-btn no-hover fl" href="#_navigation">
+        <span class="sr-only">Navigation</span>
+        <span class="icon-menu"></span>
+      </a>
+    </div>
+  </div>
+</div>
+<hr class="sr-only" hidden />
+
+
+<hy-push-state
+  replace-ids="_main"
+  link-selector="a[href]:not([href*='/assets/']):not(.external):not(.no-push-state)"
+  duration="250"
+  script-selector="script:not([type^='math/tex'])"
+  prefetch
+>
+  
+    <main
+  id="_main"
+  class="content fade-in layout-post"
+  role="main"
+  data-color="rgb(79,177,186)"
+  data-theme-color="rgb(25,55,71)"
+  
+    data-image="/assets/img/sidebar-bg-vinh.jpg"
+    data-overlay
+  
+  >
+  
+
+
+
+
+<article id="post-blog-pgm-programming-assignments" class="page post mb6" role="article">
+  <header>
+    <h1 class="post-title">
+      
+        Probabilistic Graphical Model 1 (Representation) - A note on Programming Assignments
+      
+    </h1>
+
+    <p class="post-date heading">
+      
+      <time datetime="2019-12-25T00:00:00+08:00">25 Dec 2019</time>
+      
+      
+      
+      
+      
+
+
+
+
+
+
+
+
+
+in <a href="/blog/" class="flip-title">Blog</a>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+    </p>
+
+    
+    
+
+    
+
+
+
+  
+    <p class="message" >
+      A guide to complete Probablistic Graphical Model 1 (Representation), a Coursera course taught by Prof. Daphne Koller.
+
+    </p>
+  
+
+
+  </header>
+
+  
+    <p><strong><em>Disclaimer</em></strong>: The content of this post is to facililate the learning process without sharing any solution, hence this does not violate the Coursera Honor Code.</p>
+
+<blockquote class="lead">
+  <p>“My enjoyment is reading about Probabilistic Graphical Models […] I don’t know, just love the beauty it is.”<br />
+<code class="MathJax_Preview">\hspace{40pt}</code><script type="math/tex">\hspace{40pt}</script> Someone I know via Linkedin - TTP</p>
+</blockquote>
+
+<p>These sentences best describe my feeling for PGM, which in turn motivates me to sign up for this course. In contrast to my expectation, I starred it 3 out of 5, mentally.</p>
+
+<p>It’s interesting that Daphne using the top-down approach, introducing a bit of magic terms here and there, then slowly reveals them lesson by lesson; this seems to be an effective approach for such vast field.
+I have taken a similar course once in university, so I have a rough idea of what’s going on and will not consider this one too challenging. However, as discussed numerously in User ratings, the Programming Assignments (PA) are super hard, primarily in the vague instruction rather than learner’s programming skills, which faifully warned in the Course description. Probably that’s why they made PA optional, and user can still earn a certificate by completing quizzes solely.</p>
+
+<p>To my belief, a man can’t claim himself master of a subject unless he can recreate it himself, and I did try real hard to get all those PAs complete. You easily spend 20 hours plus for a single PA due to no proper feedback and a lot of assumptions left hanging in the air. I understand this course is 8 years old, so one could not expect much support as those early days, though there should be some concrete materials for late learners to refer to.</p>
+
+<p>I managed to complete 3/4 PAs, leaving the last one unfinished after 2 weeks and decided to cancel my subscription. However, I thought it should be helpful that some upcoming learners have a solicited source of reference to complete his/her journey, and in return, provide useful tips so I and others can fulfill ours as well.</p>
+
+<p>This is not a review of the course, but a guideline to complete the four PAs, and I’m looking forward to all constructive feedback from you readers to make it better! 
+I will not bother to explain the content for each week, but mainly focus on important concepts that one must understand to complete the PAs.</p>
+
+<p><a href="#week-1-introduction--overview--bayesian-network">Week 1:  Introduction &amp; Overview | Bayesian Network</a><br />
+<a href="#week-2-template-models-and-structured-cpds-for-bayesian-networks">Week 2: Template Models and Structured CPDs for Bayesian Networks</a><br />
+<a href="#week-3-markov-network-fundamentals">Week 3: Markov Network Fundamentals</a><br />
+<a href="#week-4-decision-theory">Week 4: Decision Theory</a></p>
+
+<h2 id="week-1-introduction--overview--bayesian-network">Week 1: Introduction &amp; Overview | Bayesian Network</h2>
+<p>Factor <code class="MathJax_Preview">\phi \in \Phi</code><script type="math/tex">\phi \in \Phi</script> is a mapping function of assigned variables <code class="MathJax_Preview">X = \{(X_{1}, X_{2}), ..., X_{n})\}</code><script type="math/tex">X = \{(X_{1}, X_{2}), ..., X_{n})\}</script>, say, a realization of random variables, to a numerical value <code class="MathJax_Preview">\in \mathbb{R}</code><script type="math/tex">\in \mathbb{R}</script>; this is a more general instance of Probility Density Function(PDF)\Conditional Probability Distribution(CPF), which comes in handy as fundamental building block for defining distributions in high-dimensional spaces. A factor <code class="MathJax_Preview">\phi(D)</code><script type="math/tex">\phi(D)</script>, <code class="MathJax_Preview">D \subseteq X</code><script type="math/tex">D \subseteq X</script> has two operations: Factor Marginalization and Factor Product.</p>
+
+<p class="message">Factor Marginalization <br />
+<code class="MathJax_Preview">\hspace{40pt} \phi(D) = \sum_{i \in I}\phi(I, D)</code><script type="math/tex">\hspace{40pt} \phi(D) = \sum_{i \in I}\phi(I, D)</script>, <code class="MathJax_Preview">i</code><script type="math/tex">i</script> is a value that can be assigned to variable <code class="MathJax_Preview">I \in X</code><script type="math/tex">I \in X</script></p>
+
+<p class="message">Factor Product <br />
+<code class="MathJax_Preview">\hspace{40pt} \phi(D) = \prod_{\phi' \in S(D)} \phi'(X')</code><script type="math/tex">\hspace{40pt} \phi(D) = \prod_{\phi' \in S(D)} \phi'(X')</script>, <code class="MathJax_Preview">\hspace{3pt}S(D) = \{\phi \in \Phi |</code><script type="math/tex">\hspace{3pt}S(D) = \{\phi \in \Phi |</script> whose argument <code class="MathJax_Preview">X' \subset D \subseteq X\}</code><script type="math/tex">X' \subset D \subseteq X\}</script></p>
+
+<p><span style="font-weight:bold;">Environment setup</span></p>
+
+<p><span style="font-weight:bold; ">Octave</span></p>
+
+<p>There is a PA in the first week, and you have to install and familarize yourself with Octave/MATLAB, which admittedly is not an easy task for a fresh coder. 
+Despite the steep learning curve, I found that the tutorial is sufficient for you to get started. 
+I strongly suggest you to opt for Octave since it’s free and I have no problem with it to submit the solution.
+Below is a cheatsheet for commands you’re likely to use.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">disp(a)</code></td>
+      <td>Display the value of variable <code class="highlighter-rouge">a</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">v = start:step:end</code></td>
+      <td>Create a vector <code class="highlighter-rouge">v=[start, start+step, start+2*step, ..., end]</code>. Useful in <code class="highlighter-rouge">for</code> loop.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">ones(n_rows, n_columns)</code></td>
+      <td>Create a <code class="highlighter-rouge">(n_rows</code> <code class="MathJax_Preview">\times</code><script type="math/tex">\times</script> <code class="highlighter-rouge">n_columns)</code> matrix with all values are assigned to 1.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">zeros(n_rows, n_columns)</code></td>
+      <td>Create a <code class="highlighter-rouge">(n_rows</code> <code class="MathJax_Preview">\times</code><script type="math/tex">\times</script> <code class="highlighter-rouge">n_columns)</code> matrix with all values are assigned to 0.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">columns(M)</code></td>
+      <td>Advisable to retrieve the number of columns in a 2-dimensional matrix <code class="highlighter-rouge">M</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">rows(M)</code></td>
+      <td>Advisable to retrieve the number of rows in a 2-dimensional matrix <code class="highlighter-rouge">M</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">length(v)</code></td>
+      <td>Advisable to retrieve the number of elements in a 1-dimensional vector <code class="highlighter-rouge">v</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">M(:, column_idx)</code></td>
+      <td>Retrieve/assign value for the elements in <code class="highlighter-rouge">column_idx</code> in each row of matrix <code class="highlighter-rouge">M</code>. <br /> <code class="highlighter-rouge">column_idx</code> could be an index or vector of indexes.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">M(row_idx, :)</code></td>
+      <td>Retrieve/assign value for the elements in <code class="highlighter-rouge">row_idx</code> in each column of matrix <code class="highlighter-rouge">M</code>. <br /> <code class="highlighter-rouge">column_idx</code> could be an index or vector of indexes.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">M(:)</code></td>
+      <td>The <code class="highlighter-rouge">(n_rows</code> <code class="MathJax_Preview">\times</code><script type="math/tex">\times</script> <code class="highlighter-rouge">n_columns)</code> matrix is flatted out to a 1-dimensional vector with <code class="highlighter-rouge">(n_rows * n_columns)</code> elements.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">v(idx)</code></td>
+      <td>Retrieve/assign value for the elements in <code class="highlighter-rouge">idx</code> of a vector <code class="highlighter-rouge">v</code>. The first element in <code class="highlighter-rouge">v</code> has index 1.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">[a, b]</code></td>
+      <td>Concatenate 2 variables into a vector. This could be used for vector/matrix along the column axis.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">[a; b]</code></td>
+      <td>Concatenate 2 variables into a vector. This could be used for vector/matrix along the row axis.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">sum(v)</code></td>
+      <td>Compute the summation of all elements in vector <code class="highlighter-rouge">v</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">prod(v)</code></td>
+      <td>Compute the multiplication of all elements in vector <code class="highlighter-rouge">v</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">for i=start:step:end,</code><br />     <code class="highlighter-rouge">% do something here;</code><br /><code class="highlighter-rouge">end;</code></td>
+      <td>A <code class="highlighter-rouge">for</code> loop, repeated <code class="highlighter-rouge">(end-start)/end+1</code> times.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">sort(v, mode='descend')</code></td>
+      <td>Return sorted values of vector <code class="highlighter-rouge">v</code> and corresponding indexes in the original.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">setdiff(a, b)</code></td>
+      <td>Return unique elements in <code class="highlighter-rouge">a</code> but not <code class="highlighter-rouge">b</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">% a commment</code></td>
+      <td>Use <code class="highlighter-rouge">%</code> to comment out a line, hence you do not need to delete a statement if unnecessary.</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>Note: Octave is famous for vectorization, which is optimized for whole-array task where the operations could be done independently among elements, e.g. taking element-wise summation between two same-length vectors. 
+Interested readers can find the beginning guide <a href="https://octave.org/doc/v4.0.1/Basic-Vectorization.html">here</a>, though within the scope of this particular course, I think you can do just fine without it.</p>
+</blockquote>
+
+<p>One last thing, it’s not easy to write hundreds line of code, some of them are repetitive, without being confused or do it faultlessly. 
+Function is a good way to group statements serving a common purpose together, then we can use it abstractly (as a blackbox) and have zero care about the underlying implementation. This makes your code more concise and improve readability/efficacy of your code base a lot. In upcoming PAs, each function is defined in a <code class="highlighter-rouge">.m</code> file, with following template:</p>
+
+<div class="language-matlab highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span> <span class="n">output</span> <span class="o">=</span> <span class="n">DoSomethingFunction</span><span class="p">(</span><span class="n">input1</span><span class="p">,</span> <span class="n">input2</span><span class="p">)</span>
+
+<span class="c1">% Your code statements are here.</span>
+<span class="c1">% output must be assigned value before reaching the "end" command.</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Assume you understand the correct format of input and output, you can simply call <code class="highlighter-rouge">a = DoSomethingFunction(i1, i2)</code> as supporting function for any higher-level task, given that the <code class="highlighter-rouge">DoSomethingFunction.m</code> file and your code are both under the same directory.</p>
+
+<p><span style="font-weight:bold; ">SamIam</span></p>
+
+<p>I follow instruction in .pdf file to install JRE, JDK and <a href="http://reasoning.cs.ucla.edu/samiam/index.php">Samiam 3.0</a>. There are 3 things you need to know before using this program (<a href="https://www.coursera.org/learn/probabilistic-graphical-models/discussions/weeks/1/threads/x6gjQnSpEeidsxL9ymwRIA">ref</a>):</p>
+<ul>
+  <li>make sure that you have the Java Runtime installed and can run “java.exe” from the cmd line.</li>
+  <li>to make <code class="highlighter-rouge">samiam.bat</code> runnable, replace its whole content with below code:</li>
+</ul>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">set </span><span class="nv">VMARGS</span><span class="o">=</span>-Xruncalljvmti -Xms8m -Xmx512m -classpath samiam.jar;inflib.jar edu.ucla.belief.ui.UI
+
+java.exe %VMARGS% -launchcommand <span class="s2">"%EXECCMD% %VMARGS% %*"</span> -launchscript %0 %<span class="k">*</span>
+</code></pre></div></div>
+<ul>
+  <li>open terminal (Command Prompt) and <code class="highlighter-rouge">cd</code> to your SamIam folder, type in below command to get it started.
+    <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>samiam.bat
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><span style="font-weight:bold; ">3.1 Basic factor operations</span></p>
+
+<p>Factor is implemented as <code class="highlighter-rouge">struct</code> in Octave - a data structure has its content manifested in field-value pair. In PAs, factors are defined in 2 ways:</p>
+<div class="language-matlab highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">C</span> <span class="o">=</span> <span class="nb">struct</span><span class="p">(</span><span class="s1">'var'</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span> <span class="mi">1</span> <span class="mi">2</span><span class="p">],</span> <span class="s1">'card'</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span> <span class="mi">2</span> <span class="mi">2</span><span class="p">],</span> <span class="s1">'val'</span><span class="p">,</span> <span class="nb">ones</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">));</span>
+</code></pre></div></div>
+<p>or</p>
+<div class="language-matlab highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">C</span><span class="o">.</span><span class="nb">var</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span> <span class="mi">1</span> <span class="mi">2</span><span class="p">];</span>
+<span class="n">C</span><span class="o">.</span><span class="n">card</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span> <span class="mi">2</span> <span class="mi">2</span><span class="p">];</span>
+<span class="n">C</span><span class="o">.</span><span class="n">val</span> <span class="o">=</span> <span class="nb">ones</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Here, <code class="highlighter-rouge">var</code>, <code class="highlighter-rouge">card</code>, <code class="highlighter-rouge">val</code> are <strong><em>fields</em></strong>, and vectors on the other side of equality signs are <strong><em>values</em></strong>. One can retrieve or manipulate value of field in the second way. These variables are equivalent to Factor definition above: <code class="highlighter-rouge">C</code> is <code class="MathJax_Preview">\phi</code><script type="math/tex">\phi</script>, <code class="highlighter-rouge">var</code> is <code class="MathJax_Preview">D</code><script type="math/tex">D</script>, <code class="highlighter-rouge">card</code> is <code class="MathJax_Preview">[\mid X_1 \mid, \mid X_2 \mid, ..., \mid X_k \mid]</code><script type="math/tex">[\mid X_1 \mid, \mid X_2 \mid, ..., \mid X_k \mid]</script> - how many value each variable can be assigned, and <code class="highlighter-rouge">val</code> is vector of values for each assignment of <code class="MathJax_Preview">D</code><script type="math/tex">D</script>. One observation is <code class="highlighter-rouge">lenght(C.val) = prod(C.card)</code> and you need to understand why.</p>
+
+<p>Assume we have a factor <code class="MathJax_Preview">\phi(X_1, X_2, X_3)</code><script type="math/tex">\phi(X_1, X_2, X_3)</script>, each variable can be assigned values in these sets <code class="MathJax_Preview">\{1; 2\}, \{1, 2, 3\}, \{1\}</code><script type="math/tex">\{1; 2\}, \{1, 2, 3\}, \{1\}</script>, respectively. Hence, the set of joint assignments of <code class="MathJax_Preview">[X_1, X_2, X_3]</code><script type="math/tex">[X_1, X_2, X_3]</script> is <code class="MathJax_Preview">[1;1;1], [2;1;1], [1;2;1], [2;2;1], [1;3;1], [2;3;1]</code><script type="math/tex">[1;1;1], [2;1;1], [1;2;1], [2;2;1], [1;3;1], [2;3;1]</script>, and the corresponding value is what stored in <code class="highlighter-rouge">C.var</code>. To retrieve the value of an assignment, you need to know the <strong><em>assignment</em></strong> of <code class="MathJax_Preview">[X_1, X_2, X_3]</code><script type="math/tex">[X_1, X_2, X_3]</script>, in turn obtain the corresponding <strong><em>index</em></strong> in <code class="highlighter-rouge">C.var</code>, then simply call <code class="highlighter-rouge">C.var[index]</code>.  Luckily, we have <code class="highlighter-rouge">IndexToAssignment</code> and <code class="highlighter-rouge">AssignmentToIndex</code> to serve this purpose.</p>
+
+<blockquote>
+  <p>Note:</p>
+  <ul>
+    <li>The order of variables telling which has assignment changes most rapidly, in decreasing order from left to right.</li>
+    <li>When factor are used to represent a node has parent, e.g. CPD, that node (variable) is always the first variable in <code class="highlighter-rouge">C.var</code>, then its parents.</li>
+  </ul>
+</blockquote>
+
+<p>By now, the instruction for <em>FactorProduct</em>, <em>FactorMarginalization</em>, and <em>ObserveEvidence</em> should be clear to readers.</p>
+
+<p><span style="font-weight:bold; ">3.2 Computing the joint distribution</span></p>
+
+<p>The term distribution and factor are used interchangeably in this case, hence chain rule can be rewritten for factor as</p>
+
+<pre class="MathJax_Preview"><code>\phi(X_1, ..., X_n) = \prod_{i \in \mathbb{Z}: i \in [1;n]} \phi(X_i|Parent_G(X_i))</code></pre>
+<script type="math/tex; mode=display">\phi(X_1, ..., X_n) = \prod_{i \in \mathbb{Z}: i \in [1;n]} \phi(X_i|Parent_G(X_i))</script>
+
+<p>As a common knowledge, use your work on the PREVIOUS QUESTION.</p>
+
+<h2 id="week-2-template-models-and-structured-cpds-for-bayesian-networks">Week 2: Template Models and Structured CPDs for Bayesian Networks</h2>
+
+<p><span style="font-weight:bold;">2.2.1 Constructing Phenotype Factors for a Mendelian Model</span></p>
+
+<p><code class="highlighter-rouge">phenotypeGivenGenotypeMendelianFactor</code> is the factor type 1. Let’s call the to-be-computed CPD <code class="MathJax_Preview">\phi(P, G) = \Pr (P \mid G)</code><script type="math/tex">\phi(P, G) = \Pr (P \mid G)</script>, its <em>phenotype variable</em> <code class="MathJax_Preview">P</code><script type="math/tex">P</script> and <em>genotype variabe</em> <code class="MathJax_Preview">G</code><script type="math/tex">G</script>. Since we simulate the Tay-Sachs disease, this implies <code class="MathJax_Preview">P=\{ Has, DoNotHave \}</code><script type="math/tex">P=\{ Has, DoNotHave \}</script> and <code class="MathJax_Preview">G=\{TT, Tt, tt\}</code><script type="math/tex">G=\{TT, Tt, tt\}</script> (notice the order of assignments here and carefully think how the order looks like when joint assignments formed by both variables). Because Tay-Sachs is a recessive trait, which means only <code class="MathJax_Preview">tt</code><script type="math/tex">tt</script>  makes the person have the physical trait with <strong><em>absolute certainty</em></strong>. Even though the use case solely focuses on recessive trait, reader must utilize <code class="highlighter-rouge">isDominant</code> to implement the function such that it could be generalized for the counterpart, meaning a person having physical manifested with either <code class="MathJax_Preview">TT</code><script type="math/tex">TT</script> or <code class="MathJax_Preview">Tt</code><script type="math/tex">Tt</script>.</p>
+
+<p><span style="font-weight:bold;">2.2.2 Constructing Phenotype Factors for a Non-Mendelian Model</span></p>
+
+<p>In Non-Mendelian model, the number of alleles is not limited to 2 (e.g. <code class="MathJax_Preview">t</code><script type="math/tex">t</script> and <code class="MathJax_Preview">T</code><script type="math/tex">T</script> in 2.2.1) but could be more. Assume the number of alleles <code class="MathJax_Preview">n=3</code><script type="math/tex">n=3</script> (<code class="MathJax_Preview">\{a, b, c\}</code><script type="math/tex">\{a, b, c\}</script>), we have <code class="MathJax_Preview">\binom{n}{2}=\binom{3}{2}=3</code><script type="math/tex">\binom{n}{2}=\binom{3}{2}=3</script> (<code class="MathJax_Preview">ab, ac, bc</code><script type="math/tex">ab, ac, bc</script>) <code class="MathJax_Preview">+n</code><script type="math/tex">+n</script> (<code class="MathJax_Preview">aa, bb, cc</code><script type="math/tex">aa, bb, cc</script>) possible genotypes. Luckily, we don’t need to worry about creating such pair, but only how many of them; the corresponding values for each genotype assignment is available in <code class="highlighter-rouge">alphaList</code> already. Remember that a probability is defined correctly when the total sum of its non-negative component is <code class="MathJax_Preview">1</code><script type="math/tex">1</script>.</p>
+
+<p><span style="font-weight:bold;">2.2.3 Constructing Genotype Factors for Ancestral Nodes</span></p>
+
+<p>Readers can utilize the index in <code class="highlighter-rouge">.val</code> to retrieve corresponding genotype assignment, then break it to constituent alleles to compute the required probability.</p>
+
+<p><span style="font-weight:bold;">2.2.4 Constructing Genotype Factors for Nodes with Parents</span></p>
+
+<p>The complex task can be broken down to 2 sub-tasks:</p>
+<ul>
+  <li>How can I determine the child genotype probability given a particular genotype pair of parents? (check out Figure below).</li>
+  <li>I need to <strong><em>scan through</em></strong> all combinations of parents’ genotype pairs to determine child genotype probability for each of the case. Note that the size of <code class="highlighter-rouge">.val</code> is now triple what we have in 2.2.3.</li>
+</ul>
+
+<p class="figure">
+  <hy-img root-margin="512px"  src="/assets/blog/2019-12-25/2.2.4.png" alt="2.2.4 example" data-width="1440" data-height="836" >
+    <noscript><img data-ignore  src="/assets/blog/2019-12-25/2.2.4.png" alt="2.2.4 example" data-width="1440" data-height="836" /></noscript>
+    <span class="loading" slot="loading" hidden>
+      <span class="icon-cog"></span>
+    </span>
+  </hy-img>
+The child genotype probability distribution can be computed by splitting parents’ genotype to alleles and combine them pairwise; alleles from same parent will not be recombined together.</p>
+
+<p><span style="font-weight:bold;">3.1 Constructing New Factors for Decoupled Networks</span></p>
+
+<p>The factor to compute is <code class="MathJax_Preview">\phi(Phenotype, Allele_1, Allele_2)</code><script type="math/tex">\phi(Phenotype, Allele_1, Allele_2)</script> and approach is similar to 2.2.4; this clue should be sufficient to figure out the rest.</p>
+
+<p><span style="font-weight:bold;">4.2 Constructing Factors with Sigmoid CPDs</span></p>
+
+<p>It would be clearer if we define the Sigmoid CPD as follows:</p>
+
+<pre class="MathJax_Preview"><code>\hspace{30pt} f(X^1_1, ..., X^1_{n_1}, ..., X^m_{n_m}, Y^1_1, ..., Y^m_{n_m}) = \sum^m_{j=1}\sum^{n_j}_{i=1}w^j_i X^j_i + \sum^m_{j=1}\sum^{n_j}_{i=1}w^j_i Y^j_i</code></pre>
+<script type="math/tex; mode=display">\hspace{30pt} f(X^1_1, ..., X^1_{n_1}, ..., X^m_{n_m}, Y^1_1, ..., Y^m_{n_m}) = \sum^m_{j=1}\sum^{n_j}_{i=1}w^j_i X^j_i + \sum^m_{j=1}\sum^{n_j}_{i=1}w^j_i Y^j_i</script>
+
+<p>Basically, we simply compute the <strong><em>sum of weights</em></strong> of alleles existing in the genotype of interest. You can double check this with the provided example.
+Hence, once you got this idea, we simply scan through all assigments of genotypes - formed by <strong><em>4</em></strong> Gene Copies, then compute <code class="MathJax_Preview">sigmoid(f(X^1_1, ..., X^1_{n_1}, ..., X^m_{n_m}, Y^1_1, ..., Y^m_{n_m}))</code><script type="math/tex">sigmoid(f(X^1_1, ..., X^1_{n_1}, ..., X^m_{n_m}, Y^1_1, ..., Y^m_{n_m}))</script> to fill in the probability distribution.</p>
+
+<h2 id="week-3-markov-network-fundamentals">Week 3: Markov Network Fundamentals</h2>
+
+<p>Unlike to week 2 where we have <code class="highlighter-rouge">sampleGeneticNetworks.m</code> to test out the implementation, you need to load data structure from <code class="highlighter-rouge">.mat</code> files and compare to the instruction.</p>
+
+<p><span style="font-weight:bold;">3.1 Pairwise Factors</span></p>
+
+<p>You don’t need to do any extra computation for all info are stored in <code class="highlighter-rouge">pairwiseModel</code> already and all pairwise factors are defined <strong><em>exactly the same</em></strong>. Notice that <code class="highlighter-rouge">pairwiseModel</code> is a matrix whereas <code class="highlighter-rouge">.val</code> expected to be a 1-dimensional vector!
+Once made necesssary change, rebuild the model with</p>
+<div class="language-matlab highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">factors</span> <span class="o">=</span> <span class="n">BuildOCRNetwork</span><span class="p">(</span><span class="n">allWords</span><span class="p">,</span> <span class="n">imageModel</span><span class="p">,</span> <span class="n">pairwiseModel</span><span class="p">,</span> <span class="p">[]);</span>
+</code></pre></div></div>
+
+<p><span style="font-weight:bold;">3.2 Triplet Factors</span></p>
+
+<p>You need to <strong><em>explicitly</em></strong> build a table of <code class="highlighter-rouge">(K*K*K)</code> rows storing factors’ values; its <strong><em>index</em></strong> is corresponding to an <strong><em>assignment</em></strong> of triplet factors, whose factors’ variables are represented in <strong><em>numerical value</em></strong> from <code class="MathJax_Preview">1</code><script type="math/tex">1</script> to <code class="MathJax_Preview">26</code><script type="math/tex">26</script>. The <code class="highlighter-rouge">tripletList</code> is a factor array with <code class="MathJax_Preview">2000</code><script type="math/tex">2000</script> elements, its fields are:</p>
+<ul>
+  <li><code class="highlighter-rouge">.chars</code> telling you the assignment of top <code class="MathJax_Preview">2000^{th}</code><script type="math/tex">2000^{th}</script> triplet factors. Assume an assignment is <code class="MathJax_Preview">[x_1, x_2, x_3]</code><script type="math/tex">[x_1, x_2, x_3]</script>, each such assignment can be converted to table’s index with the formula <code class="MathJax_Preview">index = x_1 + (x_2-1)*K + (x_3-1)*K^2</code><script type="math/tex">index = x_1 + (x_2-1)*K + (x_3-1)*K^2</script>; we can derive such formula because <code class="highlighter-rouge">tripletList</code> is essentially a concise representation of our table.</li>
+  <li><code class="highlighter-rouge">.factorVal</code> telling you the corresponding value for each assignment in <code class="highlighter-rouge">.chars</code>.</li>
+</ul>
+
+<p>Akin to 3.1, you assign the same table to every triplet factor and rebuild the model with</p>
+
+<div class="language-matlab highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">factors</span> <span class="o">=</span> <span class="n">BuildOCRNetwork</span><span class="p">(</span><span class="n">allWords</span><span class="p">,</span> <span class="n">imageModel</span><span class="p">,</span> <span class="n">pairwiseModel</span><span class="p">,</span> <span class="n">tripletList</span><span class="p">]);</span>
+</code></pre></div></div>
+
+<p><span style="font-weight:bold;">3.3 Image Similarity Factors</span></p>
+
+<p><span style="font-weight:bold;">Compute Similarity Factor</span></p>
+
+<p>There are <code class="highlighter-rouge">(K*K)</code> of character joint assignments in <code class="MathJax_Preview">(C_i, C_j)</code><script type="math/tex">(C_i, C_j)</script> pairs, i.e.  <code class="MathJax_Preview">[(1, 1), (1, 2), ..., (26, 26)]</code><script type="math/tex">[(1, 1), (1, 2), ..., (26, 26)]</script>. We will set the similarity score to <code class="MathJax_Preview">1</code><script type="math/tex">1</script> for all but <code class="highlighter-rouge">K</code> pairs that having <code class="MathJax_Preview">C_i = C_j</code><script type="math/tex">C_i = C_j</script> to <code class="MathJax_Preview">ImageSimilarity(I_i, I_j)</code><script type="math/tex">ImageSimilarity(I_i, I_j)</script>.</p>
+
+<p><span style="font-weight:bold;">Compute All Similarity Factor</span></p>
+
+<p>Readers can figure out how <code class="highlighter-rouge">factors</code> is constructed and organized based on <code class="highlighter-rouge">nFactors</code>.
+Once all required steps are made, you can rebuild the model. It takes 5 minutes plus per run.</p>
+
+<div class="language-matlab highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">imageModel</span><span class="o">.</span><span class="n">ignoreSimilarity</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+<span class="n">factors</span> <span class="o">=</span> <span class="n">BuildOCRNetwork</span><span class="p">(</span><span class="n">allWords</span><span class="p">,</span> <span class="n">imageModel</span><span class="p">,</span> <span class="n">pairwiseModel</span><span class="p">,</span> <span class="n">tripletList</span><span class="p">]);</span>
+</code></pre></div></div>
+
+<h2 id="week-4-decision-theory">Week 4: Decision Theory</h2>
+
+<blockquote>
+  <p>I have faced road block in this last PA - all the local tests are passed but failed after submitting it online, hence I cannot proceed further. The guideline below reflects my understanding and could be wrong since I don’t have actual result validating it. You can check out this <a href="https://www.coursera.org/learn/probabilistic-graphical-models/discussions/weeks/4/threads/s7yEUEG9EeezGhJSvzqk_g">useful guideline</a> as well.</p>
+</blockquote>
+
+<p><em>Variable Elimination</em> is a useful technique that was not fully explained in the PA, yet your life would be way easier knowing it. In short, this is a Factor Marginalization. Given a factor <code class="MathJax_Preview">\phi(D)</code><script type="math/tex">\phi(D)</script> having its variable set <code class="MathJax_Preview">D = X \cup Y</code><script type="math/tex">D = X \cup Y</script>, <code class="MathJax_Preview">X=\{X_1, X_2, ..., X_m\}</code><script type="math/tex">X=\{X_1, X_2, ..., X_m\}</script> and <code class="MathJax_Preview">Y=\{Y_1, Y_2, ..., Y_n\}</code><script type="math/tex">Y=\{Y_1, Y_2, ..., Y_n\}</script>. If we want to reduce set of variables of <code class="MathJax_Preview">\phi</code><script type="math/tex">\phi</script> from <code class="MathJax_Preview">D</code><script type="math/tex">D</script> to <code class="MathJax_Preview">Y</code><script type="math/tex">Y</script>, it could be performed as follows:</p>
+
+<p class="message"><code class="MathJax_Preview">\hspace{40pt} \phi(Y) = VariableElimination(\phi(D), X) = \sum_{X' \in P_{a_X}} \phi(X', Y)</code><script type="math/tex">\hspace{40pt} \phi(Y) = VariableElimination(\phi(D), X) = \sum_{X' \in P_{a_X}} \phi(X', Y)</script> <br />
+<code class="MathJax_Preview">\hspace{40pt}</code><script type="math/tex">\hspace{40pt}</script> with <code class="MathJax_Preview">P_{a_X}</code><script type="math/tex">P_{a_X}</script> is all joint assignments of variables in <code class="MathJax_Preview">X</code><script type="math/tex">X</script>.</p>
+
+<p>There are 2 observations derived from this:</p>
+<ul>
+  <li><code class="MathJax_Preview">\mid D \mid \geq 2</code><script type="math/tex">\mid D \mid \geq 2</script>: the original variable set <code class="MathJax_Preview">D</code><script type="math/tex">D</script> must have at least <code class="MathJax_Preview">2</code><script type="math/tex">2</script> elements.</li>
+  <li><code class="MathJax_Preview">\mid Y \mid \geq 1</code><script type="math/tex">\mid Y \mid \geq 1</script>: the variable set after the reduction must not be an empty set.</li>
+</ul>
+
+<p>The equivalence of <code class="MathJax_Preview">X</code><script type="math/tex">X</script> in <code class="highlighter-rouge">VariableElimination</code> is <code class="highlighter-rouge">Z</code>.</p>
+
+<blockquote>
+  <p>Note: Makes no assumption about <code class="MathJax_Preview">Parent(D)</code><script type="math/tex">Parent(D)</script> and <code class="MathJax_Preview">Parent(O)</code><script type="math/tex">Parent(O)</script>, it could be from any <code class="MathJax_Preview">X_i \in X</code><script type="math/tex">X_i \in X</script>. Check out <code class="highlighter-rouge">TestCases.m</code>!</p>
+</blockquote>
+
+<p><span style="font-weight:bold;">4. Calculating Expected Utility Given A Decision Rule</span></p>
+
+<p>The instruction is actually clear, but you need to find the correct piece to complete the puzzle. Let’s reformulate it first:</p>
+
+<p>Given a Bayesian network <code class="MathJax_Preview">I</code><script type="math/tex">I</script> with variable set <code class="MathJax_Preview">X = \{X_1, X_2,... X_n\}</code><script type="math/tex">X = \{X_1, X_2,... X_n\}</script>, a decision node <code class="MathJax_Preview">D</code><script type="math/tex">D</script> whose <code class="MathJax_Preview">Parent(D) = T \subseteq X</code><script type="math/tex">Parent(D) = T \subseteq X</script>, an outcome node <code class="MathJax_Preview">O \subset X</code><script type="math/tex">O \subset X</script>, an utility node <code class="MathJax_Preview">U</code><script type="math/tex">U</script> whose <code class="MathJax_Preview">Parent(U) = O \cup D</code><script type="math/tex">Parent(U) = O \cup D</script>, let’s compute</p>
+
+<p class="message"><code class="MathJax_Preview">\hspace{40pt} \mathop{\mathbb{E}}_{I}(U) = \sum_{A \in P_{a_{Parent(U)}}} \phi(A) U(A)</code><script type="math/tex">\hspace{40pt} \mathop{\mathbb{E}}_{I}(U) = \sum_{A \in P_{a_{Parent(U)}}} \phi(A) U(A)</script> <br /> 
+<code class="MathJax_Preview">\hspace{40pt}</code><script type="math/tex">\hspace{40pt}</script> with <code class="MathJax_Preview">P_{a_{Parent(U)}}</code><script type="math/tex">P_{a_{Parent(U)}}</script> is all joint assignments of <code class="MathJax_Preview">Parent(U) = O \cup D</code><script type="math/tex">Parent(U) = O \cup D</script></p>
+
+<p>We already have <code class="MathJax_Preview">U(A)</code><script type="math/tex">U(A)</script>, so the missing factor is <code class="MathJax_Preview">\phi(A)</code><script type="math/tex">\phi(A)</script>, which is in fact <code class="MathJax_Preview">\phi(Parent(U)) = \phi(O \cup D)</code><script type="math/tex">\phi(Parent(U)) = \phi(O \cup D)</script>. We can compute this single factor by:</p>
+<ul>
+  <li>Apply Factor Product on provided <code class="MathJax_Preview">\phi(X_i, Parent(X_i)), i \in \mathbb{Z}: i \in [1;n]</code><script type="math/tex">\phi(X_i, Parent(X_i)), i \in \mathbb{Z}: i \in [1;n]</script> and <code class="MathJax_Preview">\phi(D, Parent(D))</code><script type="math/tex">\phi(D, Parent(D))</script> to obtain <strong><em>the single factor</em></strong> <code class="MathJax_Preview">\phi(X, D)</code><script type="math/tex">\phi(X, D)</script>.</li>
+  <li>Apply Variable Elimination to obtain <code class="MathJax_Preview">\phi(Parent(U)) = \phi(O \cup D)</code><script type="math/tex">\phi(Parent(U)) = \phi(O \cup D)</script>.</li>
+  <li>Compute <code class="MathJax_Preview">\mathop{\mathbb{E}}_I(U)</code><script type="math/tex">\mathop{\mathbb{E}}_I(U)</script> by scanning through each assignment of <code class="MathJax_Preview">Parent(U)</code><script type="math/tex">Parent(U)</script>.</li>
+</ul>
+
+<p><span style="font-weight:bold;">6. Maximum Expected Utility With Expected Utility Factors</span></p>
+
+<p><span style="font-weight:bold;">CalculateExpectedUtilityFactors.m</span></p>
+
+<p>The new formulation is</p>
+
+<pre class="MathJax_Preview"><code>\hspace{40pt} \mathop{\mathbb{E}}_{I}(D, Parent(D)) = \sum_{A \in P_{a_{D, Parent(D)}}} \phi(A) \left [ \sum_{B \in P_{a_{Parent(U)}}} U(A, B) \right ]</code></pre>
+<script type="math/tex; mode=display">\hspace{40pt} \mathop{\mathbb{E}}_{I}(D, Parent(D)) = \sum_{A \in P_{a_{D, Parent(D)}}} \phi(A) \left [ \sum_{B \in P_{a_{Parent(U)}}} U(A, B) \right ]</script>
+
+<p>and you can follow the same approach in 4.</p>
+
+<p><span style="font-weight:bold;">OptimizeMEU</span></p>
+
+<pre class="MathJax_Preview"><code>\hspace{40pt} d^* = argmax_{d \in D} \mathop{\mathbb{E}}_{I} (d, Parent(d))</code></pre>
+<script type="math/tex; mode=display">\hspace{40pt} d^* = argmax_{d \in D} \mathop{\mathbb{E}}_{I} (d, Parent(d))</script>
+
+<p><span style="font-weight:bold;">7.1 Joint Utility Factors</span></p>
+
+<p class="message"><code class="MathJax_Preview">\hspace{40pt} d^* = argmax_{d \in D} \left [ \sum_{I' \in OutcomeNet(I)} \mathop{\mathbb{E}}_{I'}(d, Parent(d)) \right ]</code><script type="math/tex">\hspace{40pt} d^* = argmax_{d \in D} \left [ \sum_{I' \in OutcomeNet(I)} \mathop{\mathbb{E}}_{I'}(d, Parent(d)) \right ]</script>  <br />
+with <code class="MathJax_Preview">OutcomeNet(I) = \{ I</code><script type="math/tex">OutcomeNet(I) = \{ I</script> removes all <code class="MathJax_Preview">O_j \in O; O_j \neq O_i \mid \forall O_i \in O \}</code><script type="math/tex">O_j \in O; O_j \neq O_i \mid \forall O_i \in O \}</script>, <code class="MathJax_Preview">O=\{O_1, O_2, ..., O_k\}</code><script type="math/tex">O=\{O_1, O_2, ..., O_k\}</script></p>
+
+<p><span style="font-weight:bold;">7.2 Linearity of Expectations</span></p>
+
+<p>The formulation is the same, but implementation is different:</p>
+<ul>
+  <li>Compute factor <code class="MathJax_Preview">O_i = \mathop{\mathbb{E}}_{I'}  (d, Parent(d)) , \forall I' \in OutcomeNet(I), \forall O_i \in O</code><script type="math/tex">O_i = \mathop{\mathbb{E}}_{I'}  (d, Parent(d)) , \forall I' \in OutcomeNet(I), \forall O_i \in O</script>.</li>
+  <li>Set <code class="MathJax_Preview">O_i = VariableElimination(O_i, K_i), K_i = \{</code><script type="math/tex">O_i = VariableElimination(O_i, K_i), K_i = \{</script> complementary set between variables of <code class="MathJax_Preview">O_i</code><script type="math/tex">O_i</script> and decision node <code class="MathJax_Preview">D \}, \forall O_i \in O</code><script type="math/tex">D \}, \forall O_i \in O</script>. Now <code class="MathJax_Preview">O_i</code><script type="math/tex">O_i</script>’s variable set would be <code class="MathJax_Preview">\{ Parent(U) \cup D \}</code><script type="math/tex">\{ Parent(U) \cup D \}</script>.</li>
+</ul>
+
+<pre class="MathJax_Preview"><code>\hspace{40pt} d^* = argmax_{d \in D} \left [ \sum_{A \in P_{a_{Parent(U)}}} O_i(A, d) \right ]</code></pre>
+<script type="math/tex; mode=display">\hspace{40pt} d^* = argmax_{d \in D} \left [ \sum_{A \in P_{a_{Parent(U)}}} O_i(A, d) \right ]</script>
+
+<p>That’s it, folks! Kudos to any of you made it to this line. It would be great to have your feedback to improve this guideline and help other learners to complete this challenging course 😊.</p>
+
+  
+</article>
+
+
+<hr class="dingbat related" />
+
+
+
+
+  
+     
+
+
+  <aside class="about related mt4 mb4" role="complementary">
+    
+    
+
+<div class="author mt4">
+  
+
+  
+    
+
+
+  <hy-img
+    
+    src="/assets/img/author-avatar.jpg"
+    class="avatar"
+    alt="Xuan Vinh Ho"
+    srcset="/assets/img/author-avatar.jpg 1x,/assets/img/author-avatar.jpg 2x"
+    
+  
+    
+    root-margin="512px"
+  >
+    <noscript><img data-ignore 
+    src="/assets/img/author-avatar.jpg"
+    class="avatar"
+    alt="Xuan Vinh Ho"
+    srcset="/assets/img/author-avatar.jpg 1x,/assets/img/author-avatar.jpg 2x"
+    
+  /></noscript>
+    <span class="loading" slot="loading" hidden>
+      <span class="icon-cog"></span>
+    </span>
+  </hy-img>
+
+
+  
+
+  
+  
+  <h2  class="page-title hr">
+    About
+  </h2>
+
+  <p>I am a Data Scientist at Smart Manufacturing &amp; AI team, Micron Technology, Singapore. 
+My research interests are unbounded, but I’m particularly interested in 
+Machine Learning, Natural Language Processing, Game Theory, 
+and Bioinformatics. You can find my CV 
+<a href="https://drive.google.com/file/d/1YH2Cw4ev3e-tS6QS-k6jMG2aUzlVDo6Z/view?usp=sharing">here</a>.</p>
+
+
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/hovinh" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:hxvinh@comp.nus.edu.sg" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://www.linkedin.com/in/vinh-xuan-ho-25791a71" title="LinkedIn" class="no-mark-external">
+      <span class="icon-linkedin2"></span>
+      <span class="sr-only">LinkedIn</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://facebook.com/vinh.hoxuan.9" title="Facebook" class="no-mark-external">
+      <span class="icon-facebook"></span>
+      <span class="sr-only">Facebook</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://drive.google.com/file/d/1YH2Cw4ev3e-tS6QS-k6jMG2aUzlVDo6Z/view?usp=sharing" title="Download" class="no-mark-external">
+      <span class="icon-box-add"></span>
+      <span class="sr-only">Download</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+
+  </aside>
+
+
+  
+
+  
+  
+
+  
+    
+
+
+
+
+<aside class="related mb4" role="complementary">
+  <h2 class="hr">Related Posts</h2>
+
+  <ul class="related-posts">
+    
+      
+
+
+<li>
+  <a href="/blog/2021-01-16-codenames-cheat-engine/" class="h4 flip-title">
+    <span>Breaking the Codenames' code, or a fun Semi-Turing test</span>
+  </a>
+  <time class="heading faded fine" datetime="2021-01-16T00:00:00+08:00">16 Jan 2021</time>
+</li>
+
+    
+      
+
+
+<li>
+  <a href="/blog/2018-06-17-bookreview-information-theory/" class="h4 flip-title">
+    <span>Information Theory A Tutorial Introduction – James V Stone</span>
+  </a>
+  <time class="heading faded fine" datetime="2018-06-17T00:00:00+08:00">17 Jun 2018</time>
+</li>
+
+    
+      
+
+
+<li>
+  <a href="/blog/2018-05-22-linear-programming/" class="h4 flip-title">
+    <span>Linear programming - A powerful problem solving method that works effectively in practice but is provably hard in principle</span>
+  </a>
+  <time class="heading faded fine" datetime="2018-05-22T00:00:00+08:00">22 May 2018</time>
+</li>
+
+    
+  </ul>
+</aside>
+
+  
+
+
+  
+<aside class="comments related" role="complementary">
+  <h2 class="hr">Comments</h2>
+  
+
+<div id="disqus_thread"></div>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<script>!function(w, d) {
+  if (d.getElementById("disqus_thread")) {
+    if (w.DISQUS) {
+      w.DISQUS.reset({
+        reload: true,
+        config() {
+          this.page.url = w.location.href;
+          this.page.title = d.title;
+        },
+      });
+    } else {
+      w.disqus_config = function disqusConfig() {
+        this.page.url = w.location.href;
+        this.page.title = d.title;
+      };
+      w.loadJSDeferred(d.getElementById("_hrefDisqus").href + '/embed.js');
+    }
+  }
+}(window, document);</script>
+
+
+</aside>
+
+
+  
+<footer role="contentinfo">
+  <hr/>
+  
+    <p><small class="copyright">© 2018. All rights reserved.
+</small></p>
+  
+  
+  <p><small>Powered by <a class="external" href="https://hydejack.com/">Hydejack</a> v<span id="_version">8.2.0</span></small></p>
+  <hr class="sr-only"/>
+</footer>
+
+
+</main>
+
+    <hy-drawer
+  class=""
+  align="left"
+  threshold="10"
+  touch-events
+  prevent-default
+>
+  <header id="_sidebar" class="sidebar" role="banner">
+    
+    <div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg-vinh.jpg)"></div>
+
+    <div class="sidebar-sticky">
+      <div class="sidebar-about">
+        
+        <h2 class="h1"><a href="/">ho xuan vinh</a></h2>
+        
+        
+          <p class="">
+            “deep learning, neural network, natural language processing”
+
+          </p>
+        
+      </div>
+
+      <nav class="sidebar-nav heading" role="navigation">
+        <span class="sr-only">Navigation:</span>
+<ul>
+  
+  
+  
+  
+    
+      <li>
+        <a
+          id="_navigation"
+          href="/about/"
+          class="sidebar-nav-item"
+          
+          >
+          About
+        </a>
+      </li>
+    
+  
+    
+      <li>
+        <a
+          
+          href="/news/"
+          class="sidebar-nav-item"
+          
+          >
+          News
+        </a>
+      </li>
+    
+  
+    
+      <li>
+        <a
+          
+          href="/projects/"
+          class="sidebar-nav-item"
+          
+          >
+          Projects
+        </a>
+      </li>
+    
+  
+    
+      <li>
+        <a
+          
+          href="/blog/"
+          class="sidebar-nav-item active"
+          
+          >
+          Blog
+        </a>
+      </li>
+    
+  
+</ul>
+
+      </nav>
+
+      
+
+      <div class="sidebar-social">
+        <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/hovinh" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:hxvinh@comp.nus.edu.sg" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://www.linkedin.com/in/vinh-xuan-ho-25791a71" title="LinkedIn" class="no-mark-external">
+      <span class="icon-linkedin2"></span>
+      <span class="sr-only">LinkedIn</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://facebook.com/vinh.hoxuan.9" title="Facebook" class="no-mark-external">
+      <span class="icon-facebook"></span>
+      <span class="sr-only">Facebook</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://drive.google.com/file/d/1YH2Cw4ev3e-tS6QS-k6jMG2aUzlVDo6Z/view?usp=sharing" title="Download" class="no-mark-external">
+      <span class="icon-box-add"></span>
+      <span class="sr-only">Download</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+      </div>
+    </div>
+  </header>
+</hy-drawer>
+<hr class="sr-only" hidden />
+
+  
+</hy-push-state>
+
+
+  <script>!function(w, d) {
+    var h = new Date().getHours();
+    var m = h <= 6 || h >= 18 ? 'add' : 'remove';
+    d.body.classList[m]('dark-mode');
+  }(window, document);</script>
+
+
+
+  <!--[if !IE]><!---->
+  <script>loadJSDeferred(document.getElementById('_hrefJS').href);</script>
+  
+
+  <!--<![endif]-->
+
+  
+  <script>!function(w, d) {
+    w.ga=w.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+
+    /**/
+      if (navigator.CookiesOK) {
+        ga('create', 'UA-133713093-1', 'auto');
+      } else if (d.cookie.indexOf("hy--cookies-ok=true") > -1) {
+        ga('create', 'UA-133713093-1', {
+          'storage': 'none',
+          'clientId': localStorage ? localStorage.getItem('ga--client-id') : undefined
+        });
+      } else {
+        ga('create', 'UA-133713093-1', {
+          'storage': 'none'
+        });
+        ga('set', 'forceSSL', true);
+        ga('set', 'anonymizeIp', true);
+      }
+    /**/
+
+    var pushStateEl = d.getElementsByTagName('hy-push-state')[0];
+    var timeoutId;
+    pushStateEl.addEventListener('hy-push-state-load', function() {
+      w.clearTimeout(timeoutId);
+      timeoutId = w.setTimeout(function() {
+        ga('set', 'page', w.location.pathname);
+        ga('send', 'pageview');
+      }, 500);
+    });
+
+    d.addEventListener('hy--cookies-ok', function () {
+      w.ga(function(tracker) {
+        w.ga("set", "anonymizeIp", undefined);
+        localStorage && localStorage.setItem("ga--client-id", tracker.get("clientId"));
+      });
+    });
+
+    w.loadJSDeferred('https://www.google-analytics.com/analytics.js');
+  }(window, document);</script>
+
+
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      
+        navigator.serviceWorker.getRegistration()
+          .then(r => r.unregister())
+          .catch(() => {});
+      
+    }
+  </script>
+
+
+
+
+
+
+<h2 class="sr-only" hidden>Templates (for web app):</h2>
+
+<template id="_animation-template" hidden>
+  <div class="animation-main fixed-top">
+    <div class="content">
+      <div class="page"></div>
+    </div>
+  </div>
+</template>
+
+<template id="_loading-template" hidden>
+  <div class="loading nav-btn fr">
+    <span class="sr-only">Loading…</span>
+    <span class="icon-cog"></span>
+  </div>
+</template>
+
+<template id="_error-template" hidden>
+  <div class="page">
+    <h1 class="page-title">Error</h1>
+    
+    
+    <p class="lead">
+      Sorry, an error occurred while loading <a class="this-link" href=""></a>.
+
+    </p>
+  </div>
+</template>
+
+<template id="_back-template" hidden>
+  <a id="_back" class="back nav-btn fl no-hover">
+    <span class="sr-only">Back</span>
+    <span class="icon-arrow-left2"></span>
+  </a>
+</template>
+
+<template id="_permalink-template" hidden>
+  <a href="#" class="permalink">
+    <span class="sr-only">Permalink</span>
+    <span class="icon-link"></span>
+  </a>
+</template>
+
+
+  <template id="_cookies-banner-template" hidden>
+  <div id="_cookies-banner" class="navbar fixed-bottom CookiesOK">
+    <div class="content">
+      <div class="nav-btn-bar">
+        <small class="nav-btn fl">
+          <span>This site uses cookies.
+</span>
+          <button id="_cookies-ok" class="btn btn-primary btn-sm">Okay</button>
+        </small>
+      </div>
+    </div>
+  </div>
+</template>
+
+
+
+
+</body>
+</html>
