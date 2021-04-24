@@ -9,13 +9,11 @@ order: 1
 
 
 <p><img style="width:230px; float:left; margin-right: 10px; top:10px;" src="/assets/img/author.jpg" alt="Ho Xuan Vinh's picture">
-     I had a Master of Science degree in Computer Science (School of Computing, NUS, Singapore)
-     and a Bachelor of Science degree in Information Technology (Ho Chi Minh University of Science, VNU, Vietnam). 
-     Currently, I am a Data Scientist at Smart Manufacturing & AI team, Micron Technology (Singapore). 
+     I am a Data Scientist at Smart Manufacturing & AI team, Micron Technology (Singapore). 
      My research interests are unbounded, but I'm particularly interested in 
      Machine Learning, Natural Language Processing, Game Theory, 
      and Bioinformatics. You can find my CV 
-     <a href="https://drive.google.com/file/d/1YH2Cw4ev3e-tS6QS-k6jMG2aUzlVDo6Z/view?usp=sharing">here</a>. <br> 
+     <a href="https://drive.google.com/file/d/1YH2Cw4ev3e-tS6QS-k6jMG2aUzlVDo6Z/view?usp=sharing">here</a>. <br> <br>
 
 <strong>Email</strong>: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:hxvinh@comp.nus.edu.sg" target="_top">hxvinh@comp.nus.edu.sg</a> <br>
 <strong>Linkedin</strong>: &nbsp;&nbsp;<a href="https://www.linkedin.com/in/vinh-xuan-ho-25791a71">vn.linkedin.com/in/vinh-xuan-ho</a> <br>
@@ -23,7 +21,9 @@ order: 1
 </p>
 <p style="clear:both;"><br></p>
 
-<p><span style="font-size:25px; float: left; width: 30%;height: 185px;">Education</span>
+<p><span style="font-size:25px; float: left; width: 30%;height: 290px;">Education</span>
+<strong>Quantic School of Business and Technology</strong><br>
+M.B.A., 2020-2021<br><br>
 <strong>National University of Singapore, Singapore</strong><br>
 M.Sc., Computer Science, 2017-2019<br>
 Algorithmic Transparency <br><br>
@@ -81,7 +81,7 @@ Tutor, Programming Methodology, 2018<br>
 Tutor, Software Engineering, 2017<br>
 Tutor, Combinatorial and Graph Algorithms, 2017<br><br>
 <strong> Coursera</strong><br>
-Mentor, Neural Network for Machine Learning, 2018-Present<br><br>
+Mentor, Neural Network for Machine Learning, 2018<br><br>
 <strong> Ho Chi Minh University of Science </strong><br>
 TA, Bioinformatics Summer School, 2017
 </p>
