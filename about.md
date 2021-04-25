@@ -15,7 +15,7 @@ order: 1
      and Bioinformatics. You can find my CV 
      <a href="https://drive.google.com/file/d/1YH2Cw4ev3e-tS6QS-k6jMG2aUzlVDo6Z/view?usp=sharing">here</a>. <br> <br>
 
-<strong>Email</strong>: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:hxvinh@comp.nus.edu.sg" target="_top">hxvinh@comp.nus.edu.sg</a> <br>
+<strong>Email</strong>: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:hxvinh.hcmus@gmail.com" target="_top">hxvinh.hcmus@gmail.com</a> <br>
 <strong>Linkedin</strong>: &nbsp;&nbsp;<a href="https://www.linkedin.com/in/vinh-xuan-ho-25791a71">vn.linkedin.com/in/vinh-xuan-ho</a> <br>
 <strong>Github</strong>: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/hovinh">https://github.com/hovinh</a>
 </p>
