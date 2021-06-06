@@ -1,4 +1,4 @@
-Welcome to my professional <a href="http://hovinh.github.io">webpage</a>. I forked and modified it from <a href="https://github.com/qwtel/hydejack">Hydejack</a>.
+Welcome to my professional <a href="https://hoxuanvinh.netlify.app/">webpage</a>. I forked and modified it from <a href="https://github.com/qwtel/hydejack">Hydejack</a>. The <a href="https://hovinh.github.io/">Github webpage</a> counterpart can no longer render mathematical formula, hence I simply copy the compiled code and deploy at <a href="https://www.netlify.com/">netlify</a> instead.
 
 # What I like in this template
 <ul>
