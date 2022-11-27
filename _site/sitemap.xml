@@ -1,114 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
 <url>
-<loc>http://localhost:4000/blog/</loc>
-<lastmod>2021-01-31T22:00:09+08:00</lastmod>
+  <loc>https://hoxuanvinh.netlify.app/</loc>
+  <lastmod>2021-08-12T14:59:37+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
 <url>
-<loc>http://localhost:4000/blog/2015-12-22-install-srilm-windows/</loc>
-<lastmod>2015-12-22T00:00:00+08:00</lastmod>
+  <loc>https://hoxuanvinh.netlify.app/about/</loc>
+  <lastmod>2021-08-12T14:59:37+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>http://localhost:4000/blog/2016-01-27-install-giza-ubuntu/</loc>
-<lastmod>2016-01-27T00:00:00+08:00</lastmod>
+  <loc>https://hoxuanvinh.netlify.app/news/</loc>
+  <lastmod>2021-08-12T14:59:37+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>http://localhost:4000/blog/2016-02-26-read-a3-final-file/</loc>
-<lastmod>2016-02-26T00:00:00+08:00</lastmod>
+  <loc>https://hoxuanvinh.netlify.app/projects/</loc>
+  <lastmod>2021-08-12T14:59:37+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>http://localhost:4000/blog/2016-04-22-install-srilm-ubuntu/</loc>
-<lastmod>2016-04-22T00:00:00+08:00</lastmod>
+  <loc>https://hoxuanvinh.netlify.app/blog/</loc>
+  <lastmod>2021-08-12T14:59:37+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>http://localhost:4000/blog/2016-04-29-install-mgiza-ubuntu/</loc>
-<lastmod>2016-04-29T00:00:00+08:00</lastmod>
+  <loc>https://hoxuanvinh.netlify.app/blog/2021-03-15-edu-dtw/</loc>
+  <lastmod>2021-08-12T14:59:37+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>http://localhost:4000/blog/2016-04-30-install-moses/</loc>
-<lastmod>2016-04-30T00:00:00+08:00</lastmod>
+  <loc>https://hoxuanvinh.netlify.app/blog/2021-01-16-codenames-cheat-engine/</loc>
+  <lastmod>2021-08-12T14:59:37+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>http://localhost:4000/blog/2016-09-03-run-giza-sh/</loc>
-<lastmod>2016-09-03T00:00:00+08:00</lastmod>
+  <loc>https://hoxuanvinh.netlify.app/blog/2019-12-25-pgm-programming-assignments/</loc>
+  <lastmod>2021-08-12T14:59:37+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>http://localhost:4000/blog/2017-05-02-bookreview-bayes-rule/</loc>
-<lastmod>2017-05-02T00:00:00+08:00</lastmod>
+  <loc>https://hoxuanvinh.netlify.app/blog/2018-06-17-bookreview-information-theory/</loc>
+  <lastmod>2021-08-12T14:59:37+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>http://localhost:4000/blog/2017-09-15-craig-federighi/</loc>
-<lastmod>2017-09-15T00:00:00+08:00</lastmod>
+  <loc>https://hoxuanvinh.netlify.app/blog/2018-05-22-linear-programming/</loc>
+  <lastmod>2021-08-12T14:59:37+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>http://localhost:4000/blog/2018-05-22-linear-programming/</loc>
-<lastmod>2018-05-22T00:00:00+08:00</lastmod>
+  <loc>https://hoxuanvinh.netlify.app/page-2/</loc>
+  <lastmod>2021-08-12T14:59:37+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>http://localhost:4000/blog/2018-06-17-bookreview-information-theory/</loc>
-<lastmod>2018-06-17T00:00:00+08:00</lastmod>
+  <loc>https://hoxuanvinh.netlify.app/blog/2017-09-15-craig-federighi/</loc>
+  <lastmod>2021-08-12T14:59:37+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-<loc>http://localhost:4000/blog/2019-12-25-pgm-programming-assignments/</loc>
-<lastmod>2019-12-25T00:00:00+08:00</lastmod>
+  <loc>https://hoxuanvinh.netlify.app/blog/2017-05-02-bookreview-bayes-rule/</loc>
+  <lastmod>2021-08-12T14:59:37+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-<loc>http://localhost:4000/blog/2021-01-16-codenames-cheat-engine/</loc>
-<lastmod>2021-01-16T00:00:00+08:00</lastmod>
+  <loc>https://hoxuanvinh.netlify.app/blog/2016-09-03-run-giza-sh/</loc>
+  <lastmod>2021-08-12T14:59:37+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-<loc>http://localhost:4000/about/</loc>
+  <loc>https://hoxuanvinh.netlify.app/blog/2016-04-30-install-moses/</loc>
+  <lastmod>2021-08-12T14:59:37+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-<loc>http://localhost:4000/forms-by-example/</loc>
+  <loc>https://hoxuanvinh.netlify.app/blog/2016-04-29-install-mgiza-ubuntu/</loc>
+  <lastmod>2021-08-12T14:59:37+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-<loc>http://localhost:4000/</loc>
+  <loc>https://hoxuanvinh.netlify.app/blog/2016-04-22-install-srilm-ubuntu/</loc>
+  <lastmod>2021-08-12T14:59:37+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-<loc>http://localhost:4000/news/</loc>
+  <loc>https://hoxuanvinh.netlify.app/blog/2016-02-26-read-a3-final-file/</loc>
+  <lastmod>2021-08-12T14:59:37+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-<loc>http://localhost:4000/posts/</loc>
+  <loc>https://hoxuanvinh.netlify.app/blog/2016-01-27-install-giza-ubuntu/</loc>
+  <lastmod>2021-08-12T14:59:37+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-<loc>http://localhost:4000/projects/</loc>
+  <loc>https://hoxuanvinh.netlify.app/blog/2015-12-22-install-srilm-windows/</loc>
+  <lastmod>2021-08-12T14:59:37+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-<loc>http://localhost:4000/CHANGELOG/</loc>
+  <loc>https://hoxuanvinh.netlify.app/page-3/</loc>
+  <lastmod>2021-08-12T14:59:37+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
-<url>
-<loc>http://localhost:4000/LICENSE/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/NOTICE/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/licenses/Apache-2.0/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/licenses/GPL-3.0/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/licenses/MIT/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/licenses/PRO/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/licenses/W3C/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/licenses/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/page-2/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/page-3/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/google3c12d98850c9279c.html</loc>
-<lastmod>2021-01-31T21:47:13+08:00</lastmod>
-</url>
+
+
 </urlset>
