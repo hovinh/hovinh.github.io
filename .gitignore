@@ -44,6 +44,7 @@ vendor/bundle
 .jekyll-metadata
 *.gem
 _zip
+_site/
 
 #<removed>
 _site/sitemap.xml
