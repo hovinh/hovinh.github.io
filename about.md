@@ -24,17 +24,22 @@ order: 1
 <p><span style="font-size:25px; float: left; width: 30%;height: 290px;">Education</span>
 <strong>Quantic School of Business and Technology</strong><br>
 M.B.A., 2020-2021<br><br>
+
 <strong>National University of Singapore, Singapore</strong><br>
 M.Sc., Computer Science, 2017-2019<br>
 Algorithmic Transparency <br><br>
+
 <strong>Ho Chi Minh University of Science, Vietnam</strong><br>
 B.Sc., Information Technology, 2012-2016<br>
 Semantic Labeling, Statistical Machine Translation</p>
 <p style="clear:both;"><br></p>
 
 <p><span style="font-size:25px; float: left; width: 30%;height: 185px;">Working Experience</span>
+<strong>Upskills, Singapore</strong><br>
+Data Scientist, 2022-Present<br><br>
+
 <strong>Micron Technology, Singapore</strong><br>
-Data Scientist, 2019-Present<br>
+Data Scientist, 2019-2022<br>
 </p>
 <p style="clear:both;"><br></p>
 

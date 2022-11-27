@@ -5,6 +5,7 @@ order: 2
 ---
 
 <ul>
+    <li><strong>Nov 2022</strong>: I joined Upskills, Singapore, as Junior Data Scientist role. </li>
     <li><strong>Apr 2021</strong>: I got my MBA degree from Quantic School of Business and Technology. </li>
     <li><strong>Aug 2020</strong>: I was promoted to Data Scientist (E2) at Micron Technology, Singapore. </li>
     <li><strong>Apr 2020</strong>: I was accepted into the Quantic MBA - April 2020 class. </li>
