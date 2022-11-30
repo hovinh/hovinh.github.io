@@ -5,16 +5,30 @@ order: 3
 ---
 
 <p>
-<img style="float:left; margin-right: 30px; width: 150px;" src="\assets\img\projects\project-clean-chamber.jpg" alt="Project Algorithmic Transparency">
-<strong>Chamber Clean Condition Monitoring with UNet</strong><br>
-It's labouring doing manual inspection inside a tool, but its clean condition is crucial to ensure no inherent damage for incoming batch of wafers. Started as a request to install trigger-as-demand camera to ease tool owner's responsibility, we enhance further with a schedule-based anomaly object detection that almost lift it off from their daily tasks. The solution used a UNet model to reconstruct tool's interior and the residual image capturing the abnormal "noise", e.g. dust or material waste. I also derived augmentation strategy to ensure the model is robust dealing with different tool type worldwide. Estimated per annum cost reduction of $4.2M.
+<img style="float:left; margin-right: 30px; width: 150px;" src="\assets\img\projects\project-web-migration.jpg" alt="Project Algorithmic Transparency">
+<strong>Application Migration from Ionic to Angular Framework</strong><br>
+Migrate an existing Ionic-based web app that monitors and controls equipment maintenance activity into an in-house Angular-derivative web framework with an estimated 4000 daily users across 5 Fabs. This allows user to access to the application not only via tablets but also their computers.
 </p>
 <br>
 
 <p>
-<img style="float:left; margin-right: 30px; width: 150px;" src="\assets\img\projects\project-acoustics.jpg" alt="Project Algorithmic Transparency">
+<img style="float:left; margin-right: 30px; width: 150px;" src="\assets\img\projects\project-smartband.jpg" alt="Project Algorithmic Transparency">
+<strong>Smart-band Control on High Frequency Time-series</strong><br>
+Each processing stage can be broken down to smaller steps whose durations can be as short as a few seconds, and subtle yet serious defects only occur during this specific time window. Their univariate temporal data is collected from multiple sources: temperature, pressure, position w.r.t. origin, etc. There are two typical challenges when dealing with this data type: the time-shift nature of time-series and run-to-run gradual offset change. To resolve them, we applies Fast Fourier Transform profiling, Dynamic Time Warping, and Functional Data Analysis for different applicable use cases. Two projects had passed POC stage (estimated per annum cost reduction of $4.3 M.) and one was being reviewed for upcoming integration to company's smart-band control system. Also, I applied post hoc analysis to correlate tools' sensors and inline quality measurement to identify machine mismatch issues to max out the product throughput.
+</p>
+<br>
+
+<p>
+<img style="float:left; margin-right: 30px; width: 150px;" src="\assets\img\projects\project-clean-chamber.jpg" alt="Project Chamber Clean Condition Monitoring with UNet">
+<strong>Chamber Clean Condition Monitoring with UNet</strong><br>
+It's labouring doing manual inspection inside a tool, but its clean condition is crucial to ensure no inherent damage for incoming batch of wafers. Started as a request to install trigger-as-demand camera to ease tool owner's responsibility, we enhance further with a schedule-based anomaly object detection that almost lift it off from their daily tasks. The solution used a UNet model to reconstruct tool's interior and the residual image capturing the abnormal "noise", e.g. dust or material waste left over. I also derived augmentation strategy to ensure the model is robust dealing with different tool types worldwide. Estimated per annum cost reduction of $4.2M.
+</p>
+<br>
+
+<p>
+<img style="float:left; margin-right: 30px; width: 150px;" src="\assets\img\projects\project-acoustics.jpg" alt="Project Acoustics-based Predictive Maintenance">
 <strong>Predictive Maintenance: Acoustics-based Solution Leveraging on Statistical Control and Hybrid Learning</strong><br>
-Our study identified some machine degradation events are correlated with human detectable sound patterns within the processing tool, hence potentially capture corrective and predictive maintenance. We conducted two Proof-of-concepts at two monitoring levels: (1) tool-agnostic acoustic statistical-summary-based limit control and (2) tool-specific anomaly detection with repetitive pattern that supports tool diagnostic by leveraging on hybrid training paradigm. Architecture-wise, we implemented a framework to unify acoustics pipeline and provide flexibility to integrate future solution into the network. I was also the project lead in migrating the solution to Google Cloud Platform and worldwide fan-out. Estimated per annum cost reduction of $1.1M. 
+Our study identified some machine degradation events are correlated with human detectable sound patterns within the processing tool, hence potentially capture corrective and predictive maintenance. We conducted two Proof-of-concepts at two monitoring levels: (1) tool-agnostic acoustic statistical-summary-based limit control and (2) tool-specific anomaly detection with repetitive pattern that supports tool diagnostic by leveraging on hybrid training paradigm. Architecture-wise, we implemented a framework to unify acoustics pipelines and provide flexibility to integrate future solution into the network. I was also the project lead in migrating the solution to Google Cloud Platform and worldwide fan-out. Estimated per annum cost reduction of $1.1M. 
 </p>
 <br>
 
