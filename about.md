@@ -9,10 +9,8 @@ order: 1
 
 
 <p><img style="width:230px; float:left; margin-right: 10px; top:10px;" src="/assets/img/author.jpg" alt="Ho Xuan Vinh's picture">
-     I am a Data Scientist at Upskills (Singapore). 
-     My research interests are unbounded, but I'm particularly interested in 
-     Machine Learning, Natural Language Processing, Game Theory, 
-     and Bioinformatics. You can find my CV 
+     I am a Machine Learning Consultant at Upskills (Singapore). 
+     I strongly believe that data science is a highly transferable skillset that can be applied across different domains. At the same time, I also recognize the immense value of domain knowledge in solving complex problems. I'm enthusiastic about working on diverse projects that allow me to gain new perspectives and insights, and ultimately make a positive impact on society. You can find my CV 
      <a href="https://drive.google.com/file/d/1Pt04q_vjjszlgBcRcr7_FLYJopip-lXV/view?usp=sharing">here</a>. <br> <br>
 
 <strong>Email</strong>: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:hxvinh.hcmus@gmail.com" target="_top">hxvinh.hcmus@gmail.com</a> <br>
