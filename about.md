@@ -11,7 +11,7 @@ order: 1
 <p><img style="width:230px; float:left; margin-right: 10px; top:10px;" src="/assets/img/author.jpg" alt="Ho Xuan Vinh's picture">
      I am a Machine Learning Consultant at Upskills (Singapore). 
      I strongly believe that data science is a highly transferable skillset that can be applied across different domains. At the same time, I also recognize the immense value of domain knowledge in solving complex problems. I'm enthusiastic about working on diverse projects that allow me to gain new perspectives and insights, and ultimately make a positive impact on society. You can find my CV 
-     <a href="https://drive.google.com/file/d/1Pt04q_vjjszlgBcRcr7_FLYJopip-lXV/view?usp=sharing">here</a>. <br> <br>
+     <a href="https://drive.google.com/file/d/1Pt04q_vjjszlgBcRcr7_FLYJopip-lXV/view?usp=sharing">here</a>. <br> 
 
 <strong>Email</strong>: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:hxvinh.hcmus@gmail.com" target="_top">hxvinh.hcmus@gmail.com</a> <br>
 <strong>Linkedin</strong>: &nbsp;&nbsp;<a href="https://www.linkedin.com/in/vinh-xuan-ho-25791a71">vn.linkedin.com/in/vinh-xuan-ho</a> <br>
@@ -57,9 +57,9 @@ Benabbou, N., Chakraborty, M., <span style="font-weight:bold; text-decoration: u
 [<a href="https://github.com/DataDrivenStrategicCollaborationGroup/AssignmentProblemWithDiversityConstraints">code</a>] <br><br>
 <strong>Evaluating the Semantic Tagset LLOCE</strong><br>
 <span style="font-weight:bold; text-decoration: underline">Ho, X.V.</span>, Thao, N.T.T, Dinh, D.. REV-ECIT 2015<br><br>
-<strong>Deciphering the Entertaining Impact of Pokemon</strong><br>
+<!-- <strong>Deciphering the Entertaining Impact of Pokemon</strong><br>
 <span style="font-weight:bold; text-decoration: underline">Ho, X.V.</span>, Panumate, C., Terillion, J.C., Iida, H. IJERM 2015.<br>
-[<a href="https://www.ijerm.com/vol/Volume-02-Issue-11">journal</a>]
+[<a href="https://www.ijerm.com/vol/Volume-02-Issue-11">journal</a>] -->
 </p>
 <p style="clear:both;"><br></p>
 
