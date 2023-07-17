@@ -2,7 +2,7 @@
 #layout: post
 title: Fourier Transform
 description: >
-  Fourier transform one liner. This post to ...
+  Fourier Transform is a novel method that is widely used in signal processing. This post to explain the intuition behind its mathematical operations and celebrate the beauty of it. 
 author: author1
 comments: true
 ---
@@ -66,7 +66,7 @@ Therefore, the approximation of a function $$f(t)$$ with sinusoidal basis functi
 
 $$f(t) = \sum_{n \in \mathbb{N}} A_n cos(w_nt - \phi^\prime_n) = \sum_{n \in \mathbb{N}} g_n(t) $$
 
-And because a sinusoid can be expressed as a linear combination of a sine and cosine function, hence
+And because a sinusoid $$g_n(t)$$ can be expressed as a linear combination of a sine and cosine function, hence
 
 $$f(t) = \sum_{n \in \mathbb{N}} C_n cos(w_nt) + D_n sin(w_nt)$$
 
@@ -78,7 +78,7 @@ $$\int_{-T/2}^{T/2} f(t) cos(w_mt)dt
 = \int_{-T/2}^{T/2}[\sum_{n \in \mathbb{N}} C_ncos(w_nt) + D_nsin(w_nt)] cos(w_m)dt 
 = \sum_{n \in \mathbb{N}} C_n \int_{-T/2}^{T/2} cos(w_nt) cos(w_m)dt + \sum_{n \in \mathbb{N}} D_n \int_{-T/2}^{T/2}sin(w_nt) cos(w_m)dt$$
 
-Despite its intimidating expansion, because any pair $$sin(w_nt)cos(w_mt) = 0$$ ($$\forall m, n$$) and $$cos(w_nt)cos(w_mt) = 0$$ ($$\forall m \neq n$$), we can simplify into
+Despite its intimidating expansion, because any pair $$\boldsymbol{sin(w_nt)cos(w_mt) = 0, (\forall m, n)}$$ and $$\boldsymbol{cos(w_nt)cos(w_mt) = 0, (\forall m \neq n)}$$, we can simplify the equation into
 
 $$\int_{-T/2}^{T/2} f(t) cos(w_mt)dt 
 = C_m\int_{-T/2}^{T/2} cos(w_nt) cos(w_mt) dt
@@ -98,7 +98,7 @@ I believe you have doubt about the simplification step, which I think can better
 
 The first row, for example, given the two waves $$\boldsymbol{sin(\phi)}$$ and $$\boldsymbol{cos(2\phi)}$$, the integral of their multiplication, i.e. $$\boldsymbol{\int_{-T/2}^{T/2} sin(\phi) cos(2\phi) dt} $$, is the summation of shaded area in the $$t$$-interval $$[-T/2, T/2] = [-5, 5]$$. You could notice that the positive side and negative side cover symmetrically the same amount of area, hence results in a total sum of zero. This holds true for the second example where $$\boldsymbol{\int_{-T/2}^{T/2} cos(\phi) cos(2\phi) dt = 0}$$. Lastly, $$\boldsymbol{\int_{-T/2}^{T/2} cos^2(\phi) dt} = T/2$$, again, can be shown in the figure.
 
-Even though they are examples, this does not lose generality for other such pairs with varying frequencies, as long as their frequencies are harmonics. 
+Even though they are examples, this does not lose generality for other similar pairs with varying frequencies, as long as their frequencies are harmonics. 
 
 ![Fig04](/assets/blog/2023-07-02/sin_cos2.png){:data-width="1440" data-height="836"}
 ![Fig04](/assets/blog/2023-07-02/cos_cos2.png){:data-width="1440" data-height="836"}
@@ -107,25 +107,53 @@ Fig. 4. **Row 1**: The integral of any $$sin(nwt) \times cos(mwt)$$ is zero. **R
 {:.figure}
 
 
-## Algorithm
+## Discrete Fourier Transform Algorithm
 
-A picture is worth a thousands words, let's see at play.
-first 2 sinunoids capture, the rest has amplitude next to 0, hence 
+With the background out of the way, I hope that the to-be-shown algorithm will come out in a positive light, such that the employed numerical operations accompanied by a great sense of intuition. The term "discrete" means the basis function takes whole-number multiples of a fundamental frequency.
+
+Fig. 5. depicts the Fourier Transform at play when apply it on a synthetic curve $$f(t)$$. The curve is decomposed into 500 cosine waves whose fundamental frequency and harmonic $$n_2$$ having great amplitude and higher frequency $$w_3, w_4, ..., w_{500}$$ having amplitude approximately 0. Taking the summation of the 500 waves can lead to a near-perfect reconstruction $$f^\prime(t)$$. Lastly, by plotting each frequency $$w_n$$ in the sinunoidal basis functions on the x-axis and their amplitude $$A_n$$ on the y-axis, we can form the amplitude spectrum of the curve $$f(t)$$. This shows which frequency contributes the highest to the shape of $$f(t)$$, which is expectedly the $$w_1$$ and $$w_2$$.
 
 ![Fig05](/assets/blog/2023-07-02/fourier_transform.png){:data-width="1440" data-height="836"}
-Fig. 5. **Column 1**: An arbitrary function $$f(t)$$. **Column 2**: Applying Fourier transform and compute the sinunoidal basis functions that approximate $$f(t)$$ in form of $$A_n cos(w_nt - \phi^\prime_n), \forall n \in \mathbb{N}$$. **Column 3**: Reconstruct $$f(t)$$ using the formula $$\sum_{n=1}^\mathbb{N} A_n cos(w_nt - \phi^\prime_n)$$. **Column 4**: The plot of $$A_n$$ to see the contribution of each frequency $$w_n = n \times w_1$$ in the basis functions. 
+Fig. 5. **Column 1**: A synthetic curve $$f(t)$$. **Column 2**: Applying Fourier transform and compute the sinunoidal basis functions that approximate $$f(t)$$ in form of $$A_n cos(w_nt - \phi^\prime_n), \forall n \in \mathbb{N}$$. **Column 3**: Reconstruct $$f^\prime(t)$$ using the formula $$\sum_{n=1}^\mathbb{N} A_n cos(w_nt - \phi^\prime_n)$$. **Column 4**: The plot of $$A_n$$ to see the contribution of each frequency $$w_n = n \times w_1$$ in the basis functions. 
 {:.figure}
 
+I use the code below to produce the figure. 
 
 ```python
 x, ft, T = generate_curve_ft()
 fundamental_frequency = 2 * math.pi / T
 n_frequencies = 500
 freqs, Cs, Ds = fourier_transform(fundamental_frequency, n_frequencies)
-As, thetas, sinunoids = compute_sinunoidal_basis_function(Cs, Ds, x)
+As, thetas, sinunoids = compute_sinunoidal_basis_function(Cs, Ds, n_frequencies, x)
 reconstructed_ft = np.sum(sinunoids, axis=0)
+
+f, (ax0, ax1, ax2, ax3) = plt.subplots(nrows=1, ncols=4, figsize=(20, 5))
+
+# synthetic curve ft
+ax0.plot(x, ft, color='black')
+ax0.set_title(r'random function $f(t)$')
+ax1.set_xlabel(r'time $t$')
+
+# obtain sinunoidal basis function
+for sinunoid_n in sinunoids:
+    ax1.plot(x, sinunoid_n)
+ax1.set_title(r'sinunoidal basis function $A_n cos(w_nt - \theta^\prime_n)$')
+ax1.set_xlabel(r'time $t$')
+
+# reconstructed functions
+ax2.plot(x, reconstructed_ft)
+ax2.set_title(r'reconstructed $f^\prime(t) = \sum_{n=1}^N A_n cos(w_nt - \theta^\prime_n))$')
+ax2.set_xlabel(r'time $t$')
+
+# amplitude spectrum
+ax3.plot(freqs,As)
+ax3.set_xlabel('frequency (Hz)')
+ax3.set_ylabel('amplitude')
+ax3.set_title('amplitude spectrum')
+plt.show()
 ```
 
+Firstly, I create a synthetic curve $$f(t)$$ whose value is the summation of two arbitrary sine waves, but I picked their frequencies such that the pattern of $$f(t)$$ will repeat every $$T=5$$ seconds. This is no means a constraint and you can replace with an arbitrary non-periodic function.
 ```python
 def generate_curve_ft():
     T = 5
@@ -140,6 +168,7 @@ def plus_waves(Y1, Y2):
     return Y1 +  Y2
 ```
 
+Secondly, I decided that I want 500 sinunoidal basis functions to approximate $$f(t)$$, whose fundamental frequency $$w_1 = 2 \pi/T = 2\pi/5$$ and subsequently $$w_2 = 2 \times w_1 = 4\pi/5$$, $$w_3 = 3 \times w_1 = 6\pi/5$$, and so on. For each frequency $$w_n$$, utilizing the orthogonal properties by multiplying $$f(t)$$ with $$cos(w_nt)$$ and $$sin(w_nt)$$, you can obtain $$C_n$$ and $$D_n$$ respectively. With this info, you essentially have decomposed successfully the curve into multiple sine and cosine waves.  
 ```python
 def fourier_transform(fundamental_frequency, n_frequencies):
     freqs, Cs, Ds = list(), list(), list()
@@ -172,9 +201,10 @@ def compute_integral_of_wave_multiplication(Y1, Y2):
     return np.dot(Y1, Y2) # inner product is equivalent to element-wise multiplication, then summation
 ```
 
+Thirdly, utilizing the premise of any sinunoid can be expressed as a summation of sine and cosine functions, we use $$C_n$$ and $$D_n$$ to compute the amplitude $$A_n$$ and initial phase $$\theta^\prime_n$$. Take note that we need to normalize each $$A_n$$ by dividing by 500. With this, the rest of the code is to take the summation of 500 sinunoids to compute $$f^\prime(t)$$, a reconstruction of $$f(t)$$. 
 ```python
-def compute_sinunoidal_basis_function(Cs, Ds, x):
-    As = ((Cs**2 + Ds**2) ** 0.5)
+def compute_sinunoidal_basis_function(Cs, Ds, n_frequencies, x):
+    As = ((Cs**2 + Ds**2) ** 0.5) / n_frequencies
     thetas = np.arctan(Ds / Cs)
 
     sinunoids = list()
@@ -186,25 +216,23 @@ def compute_sinunoidal_basis_function(Cs, Ds, x):
     return As, thetas, sinunoids
 ```
 
-## Properties of Fourier Transform
+The full code can be found in this <a href="https://github.com/hovinh/fourier-transform">Github</a>. Please note that the code favours explainability over performance, hence is not optimized. In practice, people commonly use fast Fourier Transform instead.
 
+## Applications
 
-marginalization: contribution to f(t)
-wavelength: distance between adajance peaks
+To recap, the Fourier Transform enables the transformation of a signal (or function) $$f(t)$$ into a set of basis functions $$g_1(t), g_2(t),$$... on the same input domain, that in turn can compute the amplitude (or "contribution") of those functions onto the construction of $$f(t)$$. The near-perfect two-way representation hints at the ability to study a signal at a closer look by decomposing it into core components, and imagine, if you will, to retain certain components and get rid of the rest, a nicer form of the original signal can be revealed.
 
-convolution theorem.
+My argument may better illustrates with an example of a sound recording. Let's say the record is polluted by background noise, then by leveraging on Fourier Transform and plenty of trial-and-error to know which basis function is the source of noise, you can remove it from the equation and enhance the sound quality. Of course this is an extreme, but it's not so further away from denoising a time series of interest by retaining only frequencies with above-a-threshold "contribution".
 
-decompose structure, 
+Alternatively, Fourier Transform is a feature engineering process to transform any time-varying (with acceptable tolerance) signal into a fixed-size tabular format. This can be done with the amplitude spectrum, i.e. the contribution profile of each sinunoidal basis function to the original signal. Frame it differently, this is also a dimensionality reduction method should you use $$M$$ data points to represent the signal, then instead $$n << M$$ frequencies can approximately capture the same information.
 
-Outcome on 2D images are more exciting, but not within the scope of this study
-
-compression, feature engineering, noise cancelling. extract feature and manipulate the original images.
-
-how to get amplitude
+The same can apply for 2D image: instead of the univariate time axis, we have the bivariate Cartesian coordinate in x and y axis to capture the "signal" $$f(x, y)$$. In the context of image processing, a filter is an image captures specific edges, corners, or textures of the original image, that is no different from the decomposition basis functions of Fourier Transform. One can, for example, explore the idea of initializing Convolutional Neural Network's kernels with these, potentially promise a more robust features and quicker convergence. 
 
 ## Summary
 
-My appreciation to James V Stone for the great book: <a href="https://www.amazon.com/Fourier-Transform-Tutorial-Introduction-ebook/dp/B0BN22Q8WW">The Fourier Transform: A Tutorial Introduction</a>, on which inspired me to write the post in the first place. 
+In this post, I have sketched out the intuition foundation behind the numerical operations employed in discrete Fourier Transform. I illustrate the algorithm with a synthetic curve and go through the code snippets that product it. Lastly, some ML applications have been discussed in the context of signal such as 1-D sound recording or 2-D image. I hope that this post make you understand better the idea behind Fourier Transform and can adapt its idea in the upcoming signal analysis or ML tasks.
+
+My appreciation to James V Stone for the great book: <a href="https://www.amazon.com/Fourier-Transform-Tutorial-Introduction-ebook/dp/B0BN22Q8WW">The Fourier Transform: A Tutorial Introduction</a>, on which inspired me to write this post in the first place. 
 
 ---
 
