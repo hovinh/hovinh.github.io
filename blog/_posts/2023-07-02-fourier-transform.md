@@ -19,6 +19,7 @@ In this blog post, I will guide you through the Fourier Transform algorithm, exp
 
 By the end of this journey, you will not only have a thorough understanding of the Fourier Transform but also gain insights into its diverse applications and ideas for your next project. 
 
+- Updated Jul/2023: modify normalization terms in computing $$C_n$$ and $$D_n$$. On courtersy of @chanlenger.
 
 ![Fig01](/assets/blog/2023-07-02/decomposition_sinusoid.png){:data-width="1440" data-height="836"}
 Fig. 1. The blue signal $$f(t)$$ that is expressed in time axis $$t$$ can be deconstructed into a set of sine waves with varying frequencies (black waves). These waves have their influence, or contribution to $$f(t)$$, quantifiable to a numerical quantity that can be displayed on the frequency axis $$w$$.  
@@ -39,19 +40,19 @@ Fig. 2. Three sinusoids illustrate the effect in wave shape that is determined b
 
 If we denote $$\phi_t = wt$$, we can reorganize the sinusoid as follows:
 
-<br/> $$\hspace{10pt} g(t) = A cos (-\phi^\prime + wt) = A cos(-\phi^\prime + \phi_t ) = A cos(\phi_t -\phi^\prime)$$
+$$\hspace{10pt} g(t) = A cos (-\phi^\prime + wt) = A cos(-\phi^\prime + \phi_t ) = A cos(\phi_t -\phi^\prime)$$
 
 We then proceed to show that **any sinusoid can be expressed as a linear combination of a sine and cosine function** in the form:
 
-<br/> $$\hspace{10pt} g(t) = A cos(\phi_t -\phi^\prime) = C cos\phi_t + D sin\phi_t$$
+$$\hspace{10pt} g(t) = A cos(\phi_t -\phi^\prime) = C cos\phi_t + D sin\phi_t$$
 
 Given the trigonometric identity $$cos(\alpha - \beta) = cos\alpha cos\beta + sin\alpha sin\beta$$, we have
 
-<br/> $$\hspace{10pt} A cos(\phi_t -\phi^\prime) = A (cos\phi_t cos\phi^\prime + sin\phi_t sin\phi^\prime) = [A cos\phi^\prime]cos\phi_t  + [A sin\phi^\prime]sin\phi_t $$
+$$\hspace{10pt} A cos(\phi_t -\phi^\prime) = A (cos\phi_t cos\phi^\prime + sin\phi_t sin\phi^\prime) = [A cos\phi^\prime]cos\phi_t  + [A sin\phi^\prime]sin\phi_t $$
 
 Plug this back in $$g(t)$$, it then shows
 
-<br/> $$\hspace{10pt} \boldsymbol{[A cos\phi^\prime]}cos\phi_t  + \boldsymbol{[A sin\phi^\prime]}sin\phi_t  = \boldsymbol{C} cos\phi_t + \boldsymbol{D} sin\phi_t$$
+$$\hspace{10pt} \boldsymbol{[A cos\phi^\prime]}cos\phi_t  + \boldsymbol{[A sin\phi^\prime]}sin\phi_t  = \boldsymbol{C} cos\phi_t + \boldsymbol{D} sin\phi_t$$
 
 As a result, we have $$\boldsymbol{C = A cos\phi^\prime}$$ and $$\boldsymbol{D = A sin \phi^\prime}$$. Furthermore, given $$sin^2 \phi^\prime + cos^2 \phi^\prime = 1$$, we have $$\boldsymbol{A=\sqrt{C^2+D^2}}$$ and $$\boldsymbol{\phi^\prime=arctan(D/C)}$$. This interestingly implies one can represent a sinusoid with either pair of parameters: the amplitude ($$A$$) and initial phase ($$\phi^\prime$$), or the amplitude ($$C$$) of a cosine and amplitude ($$D$$) of a sine whose summation construct the same sinusoid.
 
@@ -137,11 +138,12 @@ Fig. 5. **Column 1**: A synthetic curve $$f(t)$$. **Column 2**: Applying Fourier
 I use the code below to produce the figure. 
 
 ```python
-x, ft, T = generate_curve_ft()
+n_samples = 1000
+x, ft, T = generate_curve_ft(n_samples)
 fundamental_frequency = 2 * math.pi / T
 n_frequencies = 500
-freqs, Cs, Ds = fourier_transform(fundamental_frequency, n_frequencies)
-As, thetas, sinusoids = compute_sinusoidal_basis_function(Cs, Ds, n_frequencies, x)
+freqs, Cs, Ds = fourier_transform(fundamental_frequency, n_frequencies, n_samples)
+As, thetas, sinusoids = compute_sinusoidal_basis_function(Cs, Ds, x)
 reconstructed_ft = np.sum(sinusoids, axis=0)
 
 f, (ax0, ax1, ax2, ax3) = plt.subplots(nrows=1, ncols=4, figsize=(20, 5))
@@ -173,9 +175,9 @@ plt.show()
 Firstly, I create a synthetic curve $$f(t)$$ by combining the values of two arbitrary sine waves. However, I deliberately selected their frequencies in such a way that the pattern of $$f(t)$$ repeats every $$T=5$$ seconds. It's important to note that this periodicity is merely an example, and you are free to substitute it with any arbitrary non-periodic function of your choosing.
 
 ```python
-def generate_curve_ft():
+def generate_curve_ft(n_samples):
     T = 5
-    x = np.linspace(0, T, 1000)
+    x = np.linspace(0, T, n_samples)
     sin_y1 = get_sinewave_y(1, 2.5, 0, x)
     sin_y2 = get_sinewave_y(0.5, 5, 0.5, x)
     ft = plus_waves(sin_y1, sin_y2)
@@ -191,7 +193,7 @@ Next, in order to approximate the curve $$f(t)$$, I have chosen to employ 500 si
 By leveraging the orthogonal properties of these basis functions, we can calculate the coefficients $$C_n$$ and $$D_n$$ by multiplying $$f(t)$$ with the cosine ($$cos(w_nt)$$) and sine ($$sin(w_nt)$$) of the respective frequencies $$w_n$$. Through this process, the curve is effectively decomposed into multiple sine and cosine waves, capturing its various components.
 
 ```python
-def fourier_transform(fundamental_frequency, n_frequencies):
+def fourier_transform(fundamental_frequency, n_frequencies, n_samples):
     freqs, Cs, Ds = list(), list(), list()
 
 
@@ -199,10 +201,10 @@ def fourier_transform(fundamental_frequency, n_frequencies):
         harmony_freq_n = n * fundamental_frequency
         T_n = 2*math.pi/harmony_freq_n
         cosine_wave_freq_n = get_cosinewave_y(A=1, T=T_n, theta=0, x=x)
-        C_n = compute_integral_of_wave_multiplication(ft, cosine_wave_freq_n)
+        C_n = compute_integral_of_wave_multiplication(ft, cosine_wave_freq_n, n_samples)
 
         sine_wave_freq_n = get_sinewave_y(A=1, T=T_n, theta=0, x=x)
-        D_n = compute_integral_of_wave_multiplication(ft, sine_wave_freq_n)
+        D_n = compute_integral_of_wave_multiplication(ft, sine_wave_freq_n, n_samples)
 
         freqs.append(harmony_freq_n)
         Cs.append(C_n)
@@ -218,8 +220,8 @@ def get_cosinewave_y(A, T, theta, x):
     y = [A * math.cos(theta + 2*math.pi*i/T) for i in x]
     return np.array(y)
 
-def compute_integral_of_wave_multiplication(Y1, Y2):
-    return np.dot(Y1, Y2) # inner product is equivalent to element-wise multiplication, then summation
+def compute_integral_of_wave_multiplication(Y1, Y2, n_samples):
+    return 2/n_samples * np.dot(Y1, Y2) # inner product is equivalent to element-wise multiplication, then summation
 ```
 
 Thirdly, utilizing the premise of any sinusoid can be expressed as a summation of sine and cosine functions, we use $$C_n$$ and $$D_n$$ to compute the amplitude $$A_n$$ and initial phase $$\theta^\prime_n$$. Take note that we need to normalize each $$A_n$$ by dividing it by 500. 
@@ -227,17 +229,17 @@ Thirdly, utilizing the premise of any sinusoid can be expressed as a summation o
 With this understanding, the remaining code focuses on summing the 500 sinusoids together to compute $$f^\prime(t)$$, a reconstruction of the original curve $$f(t)$$.
 
 ```python
-def compute_sinusoidal_basis_function(Cs, Ds, n_frequencies, x):
-    As = ((Cs**2 + Ds**2) ** 0.5) / n_frequencies
+def compute_sinunoidal_basis_function(Cs, Ds, x):
+    As = ((Cs**2 + Ds**2) ** 0.5)
     thetas = np.arctan(Ds / Cs)
 
-    sinusoids = list()
+    sinunoids = list()
     for harmony_freq_n, theta_n, A_n in zip(freqs, thetas, As):
         T_n = 2*math.pi/harmony_freq_n
-        sinusoid_n = get_cosinewave_y(A=A_n, T=T_n, theta=-theta_n, x=x)
-        sinusoids.append(sinusoid_n)
+        sinunoid_n = get_cosinewave_y(A=A_n, T=T_n, theta=-theta_n, x=x)
+        sinunoids.append(sinunoid_n)
 
-    return As, thetas, sinusoids
+    return As, thetas, sinunoids
 ```
 
 The full code can be found in this <a href="https://github.com/hovinh/fourier-transform">Github</a>. Please note that the code prioritizes explainability rather than performance, hence it is not optimized for efficiency. In practice, it is common for people to utilize the fast Fourier Transform (FFT) for improved computational speed and efficiency.
