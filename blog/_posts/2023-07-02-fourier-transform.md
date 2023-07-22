@@ -19,7 +19,7 @@ In this blog post, I will guide you through the Fourier Transform algorithm, exp
 
 By the end of this journey, you will not only have a thorough understanding of the Fourier Transform but also gain insights into its diverse applications and ideas for your next project. 
 
-- Updated Jul/2023: modify normalization terms in computing $$C_n$$ and $$D_n$$. On courtersy of @chanlenger.
+- Updated Jul/2023: modify normalization terms in computing $$C_n$$ and $$D_n$$. On courtesy of @chanlenger.
 
 ![Fig01](/assets/blog/2023-07-02/decomposition_sinusoid.png){:data-width="1440" data-height="836"}
 Fig. 1. The blue signal $$f(t)$$ that is expressed in time axis $$t$$ can be deconstructed into a set of sine waves with varying frequencies (black waves). These waves have their influence, or contribution to $$f(t)$$, quantifiable to a numerical quantity that can be displayed on the frequency axis $$w$$.  
