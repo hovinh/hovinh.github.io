@@ -1,4 +1,4 @@
-Welcome to my professional <a href="http://hovinh.github.io">webpage</a>. I forked and modified it from <a href="https://github.com/qwtel/hydejack">Hydejack</a>.
+Welcome to my professional <a href="https://hoxuanvinh.netlify.app/">webpage</a>. I forked and modified it from <a href="https://github.com/qwtel/hydejack">Hydejack</a>. The <a href="https://hovinh.github.io/">Github webpage</a> counterpart can no longer render mathematical formula, hence I simply copy the compiled code and deploy at <a href="https://www.netlify.com/">netlify</a> instead.
 
 # What I like in this template
 <ul>
@@ -45,6 +45,6 @@ Welcome to my professional <a href="http://hovinh.github.io">webpage</a>. I fork
 - `about.md`: content of About's page.
 - `news.md`: content of News' page.
 - `projects.md`: content of Projects' page.
-
+- `_site`: where generated website located. Remember to update the inside `robots.txt`/`sitemap.xml` with `robots_netlify.txt`/`sitemap_netlify.xml` so your website can be indexed by Google. Another way is submitting the web url to https://www.xml-sitemaps.com/ to auto-generate. Do verify via Google Search Console.
 
 Please leave a star if you find this repo helpful.
