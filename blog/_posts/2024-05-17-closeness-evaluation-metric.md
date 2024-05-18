@@ -11,8 +11,6 @@ comments: true
 **Code**: <a href="https://github.com/hovinh/closeness-evaluation-measure">Github</a> |
 **CEM Paper**: <a href="https://aclanthology.org/2020.acl-main.363.pdf">ACL</a>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
 ## Introduction
 
 **Ordinal classification** is a type of classification task whose predicted classes (or categories) have a specific ordering. This implies misclassifying a class pair should be penalized differently and proportionally, with respect to their semantic order and class distribution in a dataset. Existing evaluation metrics are shown failed to capture certain aspects of this task, that it calls for the employment of a new metric, namely **Closeness Evaluation Measure** ( $$CEM$$).

@@ -45,6 +45,7 @@ vendor/bundle
 *.gem
 _zip
 /_site/
+_site
 
 #<removed>
 _site/sitemap.xml
