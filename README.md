@@ -41,7 +41,7 @@ Welcome to my professional <a href="https://hoxuanvinh.netlify.app/">webpage</a>
 # How my page is organized
 - `assets`: contains images used.
 - `_data`: contains `authors.yml` showing author profile.
-- `blog\_posts`: contains the raw content of new posts. You create a new blog page inside here, but not that the date must be today or earlier, not in the future.
+- `blog\_posts`: contains the raw content of new posts. You create a new blog page inside here, but note that the date must be today or earlier, not in the future.
 - `about.md`: content of About's page.
 - `news.md`: content of News' page.
 - `projects.md`: content of Projects' page.
