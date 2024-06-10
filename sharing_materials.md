@@ -15,9 +15,20 @@ order: 5
 In this talk, I first shared my go-to software setup to work and collaborate well within a team - this will ease the job for MLE/DE/PM to deliver a satisfactory product. Secondly, I emphasized the imperative of assessing at every stage during the development cycle and identifying a clear objective before proceeding to the next stage, with a highlight on "Problem statement" and "Iterated model enhancement with gap-based logical reasoning".
 <br><br>
 
-<!-- <span style="font-size:25px; float: left; width: 50px; height: 50px"> <img src="/assets/icons/icons8-microsoft-powerpoint-2019-96.png"></span>
-<strong>The Data Scientist's "Software Stack" and Three Tips in Model Development</strong><br>
-M.B.A., 2020-2021<br><br> -->
+<p>
+<span style="font-size:25px; float: left; width: 100px; height: 100px"> 
+    <img src="/assets/icons/icons8-microsoft-powerpoint-2019-96.png">
+</span>
+<strong>    Structuring an ML Project: The Decision-making mindset in Model Building</strong>
+<br>    2020 Dec [<a href="https://drive.google.com/file/d/1RJKGksWm3aXJwyQJsWDfE5zr14gBGpwG/view?usp=sharing">View</a>]<br>
+Inspired by Andrew Ng's course <a href="https://www.coursera.org/learn/machine-learning-projects?specialization=deep-learning">Structuring Machine Learning Projects</a>, I've compiled a practical mindset for building machine learning model.
+While some points may be outdated in the context of the recent advancements in large language models (LLM), the majority of the concepts remain relevant. 
+This deck focuses on setting the right expectations for model performance, the fine-tuning cycle, and the best practices for closing the gap. 
+Key concepts include choosing a single number evaluation metric and setting constraints, using human-level performance as a reference point, orthogonalization, error analysis, and building a quick and iterative system.
+By following these practices, you can effectively build and improve your machine learning model.
+<br><br>
+
+
 </p>
 <p style="clear:both;"><br></p>
 
