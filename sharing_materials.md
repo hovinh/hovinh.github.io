@@ -15,6 +15,23 @@ order: 5
 In this talk, I first shared my go-to software setup to work and collaborate well within a team - this will ease the job for MLE/DE/PM to deliver a satisfactory product. Secondly, I emphasized the imperative of assessing at every stage during the development cycle and identifying a clear objective before proceeding to the next stage, with a highlight on "Problem statement" and "Iterated model enhancement with gap-based logical reasoning".
 <br><br>
 
+
+<p>
+<span style="font-size:25px; float: left; width: 100px; height: 100px"> 
+    <img src="/assets/icons/icons8-microsoft-powerpoint-2019-96.png">
+</span>
+<strong>    Kedro: Hands-on Walkthrough</strong>
+<br>    2021 Nov [<a href="https://drive.google.com/file/d/1RvdaZqZ8dWurALclKAAivbRql__mme5g/view?usp=sharing">View</a>]<br>
+This presentation provides an introduction to Kedro and its three primary commands:
+<br>
+- kedro new: Create a new project codebase.<br>
+- kedro run: Execute your data pipeline.<br>
+- kedro viz: Visualize your pipeline and compare experiments.
+<br>
+We'll also demonstrate the following features: optimize performance by stacking and running pipelines in parallel; enable efficient tracking of your experiments; use layers and namespaces to simplify and organize your workflow.
+
+<br><br>
+
 <p>
 <span style="font-size:25px; float: left; width: 100px; height: 100px"> 
     <img src="/assets/icons/icons8-microsoft-powerpoint-2019-96.png">
