@@ -5,14 +5,35 @@ order: 3
 ---
 
 <p>
-<img style="float:left; margin-right: 30px; width: 150px;" src="\assets\img\projects\project-web-migration.jpg" alt="Project Algorithmic Transparency">
+<img style="float:left; margin-right: 30px; width: 150px;" src="\assets\img\projects\project-report-comparison-risk-profile.jpg" alt="Project Automated Financial Report Comparison & Risk Assessment">
+<strong>Automated Financial Report Comparison & Risk Assessment</strong><br>
+Two use cases apply NLP analytics to streamline labor-intensive financial data processing. The first use case addresses the challenge of comparing financial reports across different companies, which is complicated by varying report styles. To overcome this, the solution involves automatically extracting data from digital reports and mapping it to a universal template using a TF-IDF weighted KNN-clustering mechanism. The second use case focuses on the sales team’s need to compile risk profiles from annual reports to recommend suitable financial products. By extracting information from annual reports and utilizing Generative AI techniques to complete standardized questionnaires, this approach aims to simplify and expedite the creation of risk profiles. 
+</p>
+<br>
+
+<p>
+<img style="float:left; margin-right: 30px; width: 150px;" src="\assets\img\projects\project-sgx-news.jpg" alt="Project Liquidity Insights from SGX Market Data">
+<strong>Liquidity Insights from SGX Market Data</strong><br>
+The Singapore Exchange (SGX) operates as a multi-asset exchange and a key hub for trading and investment, providing critical market data such as corporate actions, announcements, and trading information that listed companies must disclose under SGX regulations. This data is valuable for investment, risk management, and strategic decision-making. The problem was to assess the viability of using SGX’s liquidity-impact news as an input feature for forecasting aggregated customer balance movements. To address this, I conducted news coverage, periodicity, and efficacy analyses to evaluate the integration of SGX’s XML data feed as a supplementary source for cash flow forecasting in liquidity management scenarios.
+</p>
+<br>
+
+<p>
+<img style="float:left; margin-right: 30px; width: 150px;" src="\assets\img\projects\project-liquidity-price-auction.jpg" alt="Project Algorithmic Transparency">
+<strong>Liquidity Management and Price Auctions Forecast</strong><br>
+Implemented and fine-tuned four use cases for liquidity management and financial instrument price auction forecasting, optimizing the client’s daily trading operations. Delivered comprehensive insights via a Tableau dashboard. Integrated an enterprise-level model monitoring solution with alarm-based thresholds, enabling proactive responses to model degradation and ensuring operational efficiency through timely adjustments
+</p>
+<br>
+
+<p>
+<img style="float:left; margin-right: 30px; width: 150px;" src="\assets\img\projects\project-web-migration.jpg" alt="Project Application Migration from Ionic to Angular Framework">
 <strong>Application Migration from Ionic to Angular Framework</strong><br>
 Migrate an existing Ionic-based web app that monitors and controls equipment maintenance activity into an in-house Angular-derivative web framework with an estimated 4000 daily users across 5 Fabs. This allows user to access to the application not only via tablets but also their computers.
 </p>
 <br>
 
 <p>
-<img style="float:left; margin-right: 30px; width: 150px;" src="\assets\img\projects\project-smartband.jpg" alt="Project Algorithmic Transparency">
+<img style="float:left; margin-right: 30px; width: 150px;" src="\assets\img\projects\project-smartband.jpg" alt="Project Smart-band Control on High Frequency Time-series">
 <strong>Smart-band Control on High Frequency Time-series</strong><br>
 Each processing stage can be broken down to smaller steps whose durations can be as short as a few seconds, and subtle yet serious defects only occur during this specific time window. Their univariate temporal data is collected from multiple sources: temperature, pressure, position w.r.t. origin, etc. There are two typical challenges when dealing with this data type: the time-shift nature of time-series and run-to-run gradual offset change. To resolve them, we applies Fast Fourier Transform profiling, Dynamic Time Warping, and Functional Data Analysis for different applicable use cases. Two projects had passed POC stage (estimated per annum cost reduction of $4.3 M.) and one was being reviewed for upcoming integration to company's smart-band control system. Also, I applied post hoc analysis to correlate tools' sensors and inline quality measurement to identify machine mismatch issues to max out the product throughput.
 </p>
