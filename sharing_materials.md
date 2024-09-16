@@ -56,10 +56,23 @@ By following these practices, you can effectively build and improve your machine
 <span style="font-size:25px; float: left; width: 100px; height: 100px"> 
     <img src="/assets/icons/icons8-mind-map-96.png">
 </span>
+<strong>    [Book Summary] Data Visualization with Excel Dashboards and Reports, Dick Kusleika </strong>
+<br>    2024 Sep [<a href="https://miro.com/app/live-embed/uXjVKouf0z4=/?moveToViewport=-1611,-618,2808,1481&embedId=323602865658">View</a>]<br>
+The book focuses on three core aspects: the dashboard development lifecycle, Excel's data querying, transformation, and visualization capabilities, and the use of purpose-driven visualization elements. It emphasizes the importance of clarifying dashboard requirements with stakeholders, iterative feedback, and understanding data details from the outset. The design section highlights breaking data into layers and using Excel's tools like PivotTables and charts, illustrated through case studies. Finally, the book categorizes charts into three types—Comparison, Composition, and Relationship—and discusses non-chart elements like formatting and sparklines for effective data visualization.  
+</p>
+
+<br><br>
+
+<p>
+<span style="font-size:25px; float: left; width: 100px; height: 100px"> 
+    <img src="/assets/icons/icons8-mind-map-96.png">
+</span>
 <strong>    [Book Summary] Practical Time Series Analysis: Prediction with Statistics and Machine Learning, Aileen Nielsen </strong>
 <br>    2023 Jun [<a href="https://miro.com/app/live-embed/uXjVPth3VJk=/?moveToViewport=-1497,-930,3523,1834&embedId=64272312016">View</a>]<br>
 The book describes well the practical aspect of an end-to-end time series development process. It discusses the best practices of EDA, feature engineering, modelling, and data storing with valuable tips: lookahead issue, plotting techniques, temporal characteristics in analysis, etc... The writing and mathematical explanation are not well-written, but its content is best appreciated once you work on a time series forecast use case.  
 </p>
+
+
 
 
 
