@@ -5,6 +5,7 @@ order: 2
 ---
 
 <ul>
+    <li><strong>Oct 2024</strong>: I joined PSA Singapore as a Deputy Data Science Lead. </li>
     <li><strong>Nov 2022</strong>: I joined Upskills, Singapore, as a Machine Learning Consultant. </li>
     <li><strong>Apr 2021</strong>: I got my MBA degree from Quantic School of Business and Technology. </li>
     <li><strong>Aug 2020</strong>: I was promoted to Data Scientist (E2) at Micron Technology, Singapore. </li>

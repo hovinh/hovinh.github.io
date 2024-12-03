@@ -10,6 +10,15 @@ order: 5
 <span style="font-size:25px; float: left; width: 100px; height: 100px"> 
     <img src="/assets/icons/icons8-microsoft-powerpoint-2019-96.png">
 </span>
+<strong>    Git: The Basics</strong>
+<br>    2024 Dec [<a href="https://drive.google.com/file/d/1Dv6ijyUg_U-kcukykun68U9AqD34Ty6L/view?usp=sharing">View</a>]<br>
+This slide deck is based on the book <i>Learn Git in a Month of Lunches (Rick Umali)</i>. Git is an essential tool for any developer, providing a robust system for version control and collaboration. While the initial setup may present a learning curve for beginners, Git becomes intuitive and efficient with regular use. Fundamental commands like commit, checkout, and merge are staples of daily workflows. Beyond these basics, advanced techniques enhance collaboration and streamline team projects. The deck also highlights two popular Git workflows, offering a foundation for development teams to establish effective collaboration practices.
+<br><br>
+
+<p>
+<span style="font-size:25px; float: left; width: 100px; height: 100px"> 
+    <img src="/assets/icons/icons8-microsoft-powerpoint-2019-96.png">
+</span>
 <strong>    The Data Scientist's "Software Stack" and Three Tips in Model Development</strong>
 <br>    2023 Feb [<a href="https://drive.google.com/file/d/1t5X78Gh5Pg4Vi3BY9PU8jil0AphT-3d2/view?usp=sharing">View</a>]<br>
 In this talk, I first shared my go-to software setup to work and collaborate well within a team - this will ease the job for MLE/DE/PM to deliver a satisfactory product. Secondly, I emphasized the imperative of assessing at every stage during the development cycle and identifying a clear objective before proceeding to the next stage, with a highlight on "Problem statement" and "Iterated model enhancement with gap-based logical reasoning".

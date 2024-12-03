@@ -32,9 +32,12 @@ B.Sc., Information Technology, 2012-2016<br>
 Semantic Labeling, Statistical Machine Translation</p>
 <p style="clear:both;"><br></p>
 
-<p><span style="font-size:25px; float: left; width: 30%;height: 185px;">Working Experience</span>
+<p><span style="font-size:25px; float: left; width: 30%;height: 290px;">Working Experience</span>
+<strong>PSA Singapore, Singapore</strong><br>
+Deputy Data Science Lead, 2024-Present<br><br>
+
 <strong>Upskills, Singapore</strong><br>
-Data Scientist, 2022-Present<br><br>
+Data Scientist, 2022-2024<br><br>
 
 <strong>Micron Technology, Singapore</strong><br>
 Data Scientist, 2019-2022<br>
