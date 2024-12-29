@@ -10,6 +10,16 @@ order: 5
 <span style="font-size:25px; float: left; width: 100px; height: 100px"> 
     <img src="/assets/icons/icons8-microsoft-powerpoint-2019-96.png">
 </span>
+<strong>    Design Patterns </strong>
+<br>    2024 Dec [<a href="https://drive.google.com/file/d/1-iXFAGBd_QInkEgE9glH1gCiEF4UjPGv/view?usp=sharing">View</a>]<br>
+This deck is inspired by <i>Gamma, Erich. "Design patterns: elements of reusable object-oriented software." (1995)</i>.
+It highlights the art of programming beyond just getting code to work, showcasing how OOP can elegantly handle object creation and relationships for better maintainability. The book introduces 23 foundational patterns—creational, structural, and behavioral—to enhance design thinking. Beyond summarizing these patterns with practical examples, I explored six techniques to refactor code, such as turning methods into classes and using abstraction for interaction. These insights serve as a blueprint for crafting smarter, more sustainable codebases.
+<br><br>
+
+<p>
+<span style="font-size:25px; float: left; width: 100px; height: 100px"> 
+    <img src="/assets/icons/icons8-microsoft-powerpoint-2019-96.png">
+</span>
 <strong>    Git: The Basics</strong>
 <br>    2024 Dec [<a href="https://drive.google.com/file/d/1Dv6ijyUg_U-kcukykun68U9AqD34Ty6L/view?usp=sharing">View</a>]<br>
 This slide deck is based on the book <i>Learn Git in a Month of Lunches (Rick Umali)</i>. Git is an essential tool for any developer, providing a robust system for version control and collaboration. While the initial setup may present a learning curve for beginners, Git becomes intuitive and efficient with regular use. Fundamental commands like commit, checkout, and merge are staples of daily workflows. Beyond these basics, advanced techniques enhance collaboration and streamline team projects. The deck also highlights two popular Git workflows, offering a foundation for development teams to establish effective collaboration practices.

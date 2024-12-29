@@ -9,7 +9,7 @@ order: 1
 
 
 <p><img style="width:230px; float:left; margin-right: 10px; top:10px;" src="/assets/img/author.jpg" alt="Ho Xuan Vinh's picture">
-     I am a Machine Learning Consultant at Upskills (Singapore). 
+     I am a Deputy Data Science Lead at PSA Singapore. 
      I strongly believe that data science is a highly transferable skillset that can be applied across different domains. At the same time, I also recognize the immense value of domain knowledge in solving complex problems. I'm enthusiastic about working on diverse projects that allow me to gain new perspectives and insights, and ultimately make a positive impact on society. You can find my CV 
      <a href="https://drive.google.com/file/d/1jNtgeEjxp3u13Fwoj5tzkVZtB4bGD0ae/view?usp=sharing">here</a>. <br> 
 
