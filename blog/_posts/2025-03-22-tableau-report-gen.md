@@ -47,10 +47,7 @@ If you have data privacy concerns, we’ve also published the code as a package 
 You can install it and run the app locally.
 
 
-## Demo
-
-Here’s a glimpse of how the app works:
-
+## The App
 
 Here's a glimpse at how the app works:
 

@@ -4,8 +4,18 @@ title: Sharing Materials
 menu: true
 order: 5
 ---
-
 <span style="font-size:40px;"> Presentations </span>
+<p>
+<span style="font-size:25px; float: left; width: 100px; height: 100px"> 
+    <img src="/assets/icons/icons8-microsoft-powerpoint-2019-96.png">
+</span>
+<strong>    PySpark Tutorial </strong>
+<br>    2025 Apr [<a href="https://drive.google.com/file/d/1ocsOJsdj-ef2Ij5s9dh9zoJxhiYJ4fVw/view?usp=sharing">View</a>]<br>
+This deck is based on <i> Chambers, Bill, and Matei Zaharia. "Spark: The definitive guide: Big data processing made simple."(2018)</i>, one of the most comprehensive resources on Apache Spark. I’ve distilled its key lessons into essential takeaways: What is PySpark? What are its core components - RDDs, DataFrames, Spark SQL, and Pandas UDFs? How does a Spark application run, from its lifecycle to execution breakdown? And finally, how to monitor job status and explore different ways to run Spark jobs.
+ </p><br>
+
+
+
 <p>
 <span style="font-size:25px; float: left; width: 100px; height: 100px"> 
     <img src="/assets/icons/icons8-microsoft-powerpoint-2019-96.png">
@@ -14,7 +24,7 @@ order: 5
 <br>    2024 Dec [<a href="https://drive.google.com/file/d/1-iXFAGBd_QInkEgE9glH1gCiEF4UjPGv/view?usp=sharing">View</a>]<br>
 This deck is inspired by <i>Gamma, Erich. "Design patterns: elements of reusable object-oriented software." (1995)</i>.
 It highlights the art of programming beyond just getting code to work, showcasing how OOP can elegantly handle object creation and relationships for better maintainability. The book introduces 23 foundational patterns—creational, structural, and behavioral—to enhance design thinking. Beyond summarizing these patterns with practical examples, I explored six techniques to refactor code, such as turning methods into classes and using abstraction for interaction. These insights serve as a blueprint for crafting smarter, more sustainable codebases.
-<br><br>
+</p><br>
 
 <p>
 <span style="font-size:25px; float: left; width: 100px; height: 100px"> 
@@ -23,7 +33,7 @@ It highlights the art of programming beyond just getting code to work, showcasin
 <strong>    Git: The Basics</strong>
 <br>    2024 Dec [<a href="https://drive.google.com/file/d/1Dv6ijyUg_U-kcukykun68U9AqD34Ty6L/view?usp=sharing">View</a>]<br>
 This slide deck is based on the book <i>Learn Git in a Month of Lunches (Rick Umali)</i>. Git is an essential tool for any developer, providing a robust system for version control and collaboration. While the initial setup may present a learning curve for beginners, Git becomes intuitive and efficient with regular use. Fundamental commands like commit, checkout, and merge are staples of daily workflows. Beyond these basics, advanced techniques enhance collaboration and streamline team projects. The deck also highlights two popular Git workflows, offering a foundation for development teams to establish effective collaboration practices.
-<br><br>
+</p><br>
 
 <p>
 <span style="font-size:25px; float: left; width: 100px; height: 100px"> 
@@ -32,7 +42,7 @@ This slide deck is based on the book <i>Learn Git in a Month of Lunches (Rick Um
 <strong>    The Data Scientist's "Software Stack" and Three Tips in Model Development</strong>
 <br>    2023 Feb [<a href="https://drive.google.com/file/d/1t5X78Gh5Pg4Vi3BY9PU8jil0AphT-3d2/view?usp=sharing">View</a>]<br>
 In this talk, I first shared my go-to software setup to work and collaborate well within a team - this will ease the job for MLE/DE/PM to deliver a satisfactory product. Secondly, I emphasized the imperative of assessing at every stage during the development cycle and identifying a clear objective before proceeding to the next stage, with a highlight on "Problem statement" and "Iterated model enhancement with gap-based logical reasoning".
-<br><br>
+</p><br>
 
 
 <p>
@@ -48,8 +58,7 @@ This presentation provides an introduction to Kedro and its three primary comman
 - kedro viz: Visualize your pipeline and compare experiments.
 <br>
 We'll also demonstrate the following features: optimize performance by stacking and running pipelines in parallel; enable efficient tracking of your experiments; use layers and namespaces to simplify and organize your workflow.
-
-<br><br>
+</p><br>
 
 <p>
 <span style="font-size:25px; float: left; width: 100px; height: 100px"> 
@@ -62,10 +71,9 @@ While some points may be outdated in the context of the recent advancements in l
 This deck focuses on setting the right expectations for model performance, the fine-tuning cycle, and the best practices for closing the gap. 
 Key concepts include choosing a single number evaluation metric and setting constraints, using human-level performance as a reference point, orthogonalization, error analysis, and building a quick and iterative system.
 By following these practices, you can effectively build and improve your machine learning model.
-<br><br>
+</p><br>
 
 
-</p>
 <p style="clear:both;"><br></p>
 
 <span style="font-size:40px;"> Mind maps </span>
