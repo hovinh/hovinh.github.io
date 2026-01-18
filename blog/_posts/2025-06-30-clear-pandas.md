@@ -11,7 +11,7 @@ comments: true
 
 ## Pandas Get Dirty Sometimes
 
-`panda` is a powerful tool for working with tabular data, offering a wide range of built-in functions that make data transformation tasks straightforward.
+`pandas` is a powerful tool for working with tabular data, offering a wide range of built-in functions that make data transformation tasks straightforward.
 However, I’ve noticed that as more tables are integrated and transformations accumulate, the code tends to get “dirty” fast: the logic becomes harder to follow, and it’s easy to overlook certain steps—especially when reusing the same transformation chains across similar tables.
 
 It’s natural to wrap these transformations into functions to make them more manageable.
