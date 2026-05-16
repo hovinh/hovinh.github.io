@@ -9,6 +9,17 @@ order: 5
 <span style="font-size:25px; float: left; width: 100px; height: 100px"> 
     <img src="/assets/icons/icons8-microsoft-powerpoint-2019-96.png">
 </span>
+<strong>    Causal Inference and Discovery </strong>
+<br>    2026 May [<a href="https://drive.google.com/file/d/1ALJUsjpOJ5_tTDcm8Ds94IhwAD9waThL/view?usp=sharing">View</a>]<br>
+
+This deck is based <i> on Molak, Aleksander. Causal Inference and Discovery in Python (2023) </i>. I've distilled its key lessons into four parts: the foundations of causality and why correlation alone is insufficient for decision-making; the language of causal graphs with Structural Causal Models, DAGs, forks, chains, and colliders; the toolkit for causal inference covering identification strategies, back-door and front-door criteria, do-calculus, and treatment effect estimation; and finally, the four families of causal discovery algorithms (constraint-based, score-based, functional, and gradient-based) that learn causal structure directly from data.
+ </p><br>
+
+
+<p>
+<span style="font-size:25px; float: left; width: 100px; height: 100px"> 
+    <img src="/assets/icons/icons8-microsoft-powerpoint-2019-96.png">
+</span>
 <strong>    PySpark Tutorial </strong>
 <br>    2025 Apr [<a href="https://drive.google.com/file/d/1ocsOJsdj-ef2Ij5s9dh9zoJxhiYJ4fVw/view?usp=sharing">View</a>]<br>
 This deck is based on <i> Chambers, Bill, and Matei Zaharia. "Spark: The definitive guide: Big data processing made simple."(2018)</i>, one of the most comprehensive resources on Apache Spark. I’ve distilled its key lessons into essential takeaways: What is PySpark? What are its core components - RDDs, DataFrames, Spark SQL, and Pandas UDFs? How does a Spark application run, from its lifecycle to execution breakdown? And finally, how to monitor job status and explore different ways to run Spark jobs.
