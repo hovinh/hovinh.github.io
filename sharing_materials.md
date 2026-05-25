@@ -9,6 +9,17 @@ order: 5
 <span style="font-size:25px; float: left; width: 100px; height: 100px"> 
     <img src="/assets/icons/icons8-microsoft-powerpoint-2019-96.png">
 </span>
+<strong>    Docker: From Zero to Daily Driver </strong>
+<br>    2026 May [<a href="https://drive.google.com/file/d/1QdoOjGS9Kc2EySqsv8FlCVg8qTy2uGLB/view?usp=sharing">View</a>]<br>
+
+This deck is based on <i>Poulton, Nigel. Docker Deep Dive: Zero to Docker in a Single Book (2023)</i>. 
+Aimed at data scientists and developers picking up Docker for the first time, it distils the essentials into four themes: why containers exist and how Docker's engine works under the hood; managing images, containers, and persistent data; containerising apps with Dockerfiles and Compose; and networking and cluster orchestration with Swarm. A concept map and glossary tie all the pieces together for a practical mental model.
+</p><br>
+
+<p>
+<span style="font-size:25px; float: left; width: 100px; height: 100px"> 
+    <img src="/assets/icons/icons8-microsoft-powerpoint-2019-96.png">
+</span>
 <strong>    Causal Inference and Discovery </strong>
 <br>    2026 May [<a href="https://drive.google.com/file/d/1ALJUsjpOJ5_tTDcm8Ds94IhwAD9waThL/view?usp=sharing">View</a>]<br>
 
