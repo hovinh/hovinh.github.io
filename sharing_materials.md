@@ -5,6 +5,18 @@ menu: true
 order: 5
 ---
 <span style="font-size:40px;"> Presentations </span>
+
+<p>
+<span style="font-size:25px; float: left; width: 100px; height: 100px"> 
+    <img src="/assets/icons/icons8-microsoft-powerpoint-2019-96.png">
+</span>
+<strong>    Kubernetes: Running ML Workloads at Scale </strong>
+<br>    2026 May [<a href="https://drive.google.com/file/d/1s2h1JWd_NXjbRt6h-aroiaIEKnGKkV-b/view?usp=sharing">View</a>]<br>
+
+This deck is compiled from <i>Poulton, Nigel. The Kubernetes Book (2023)</i>, with ML use cases mapped by Claude for data scientists and ML engineers.
+It covers: <strong>cluster architecture</strong> (control plane, worker nodes, scheduling); <strong>workload controllers</strong> (Pods, Deployments, StatefulSets) tied to training jobs and model serving; <strong>networking</strong> for stable model API endpoints; <strong>storage</strong> for datasets and artefacts; <strong>configuration management</strong> via ConfigMaps and Secrets; and <strong>access control</strong> with RBAC. Includes a full ecosystem map and 16-term glossary.
+</p><br>
+
 <p>
 <span style="font-size:25px; float: left; width: 100px; height: 100px"> 
     <img src="/assets/icons/icons8-microsoft-powerpoint-2019-96.png">
