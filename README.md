@@ -35,6 +35,7 @@ Welcome to my professional <a href="https://hoxuanvinh.netlify.app/">webpage</a>
     - You can try to modify my page and refresh browser to see the changes take effect. Thanks to *--inceremental* parameter, it usually takes 3 seconds to rebuild the page. 
 
     > **NOTE**: The auto-generated site is located in *_site* directory. To add new content, it must not be inside this directory. If you add/remove a new page, you should 1) interrupt terminal, 2) delete *_site* directory, then 3) rerun *jekyll serve --incremental* again.  
+    > **NOTE**: When deploying to Netlify, stop the *jekyll serve* command, run *bundle exec jekyll build* to produce a fresh _site folder, compress that _site folder into a .zip, then drag-and-drop the .zip file (not the raw folder) into the Netlify Deploy tab. Dragging the uncompressed _site folder can silently drop nested subfolders (e.g. the KaTeX `dist` folder), which breaks mathematical formula rendering on the live site even though it works locally.
 3. Have fun!
     >**NOTE**: before commiting and pushing to Github, remember to remodify *Gemfile*.
 
