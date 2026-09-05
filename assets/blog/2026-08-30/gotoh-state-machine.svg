@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 400" font-family="Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="520" height="400" fill="#ffffff"/>
+  <text x="260" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#111827">Gotoh's three tables: why one table isn't enough</text>
+
+  <defs>
+    <marker id="ga" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1d4ed8"/>
+    </marker>
+  </defs>
+
+  <!-- M self loop -->
+  <path d="M 240,64 C 228,20 292,20 280,64" fill="none" stroke="#1d4ed8" stroke-width="2" marker-end="url(#ga)"/>
+  <text x="260" y="38" text-anchor="middle" font-size="11" fill="#1d4ed8">match/sub: +score(a&#8305;,b&#8481;)</text>
+
+  <!-- M -> D -->
+  <line x1="236" y1="132" x2="164" y2="228" stroke="#1d4ed8" stroke-width="2.5" marker-end="url(#ga)"/>
+  <text x="165" y="175" text-anchor="middle" font-size="11" fill="#1d4ed8">open: &#8722;gap_open</text>
+
+  <!-- M -> I -->
+  <line x1="284" y1="132" x2="356" y2="228" stroke="#1d4ed8" stroke-width="2.5" marker-end="url(#ga)"/>
+  <text x="355" y="175" text-anchor="middle" font-size="11" fill="#1d4ed8">open: &#8722;gap_open</text>
+
+  <!-- D self loop -->
+  <path d="M 105,245 C 55,232 55,288 105,275" fill="none" stroke="#b45309" stroke-width="2" marker-end="url(#ga)"/>
+  <text x="55" y="262" text-anchor="middle" font-size="11" fill="#b45309">extend:</text>
+  <text x="55" y="276" text-anchor="middle" font-size="11" fill="#b45309">&#8722;gap_extend</text>
+
+  <!-- I self loop -->
+  <path d="M 415,245 C 465,232 465,288 415,275" fill="none" stroke="#b45309" stroke-width="2" marker-end="url(#ga)"/>
+  <text x="465" y="262" text-anchor="middle" font-size="11" fill="#b45309">extend:</text>
+  <text x="465" y="276" text-anchor="middle" font-size="11" fill="#b45309">&#8722;gap_extend</text>
+
+  <!-- D..I forbidden -->
+  <line x1="180" y1="290" x2="340" y2="290" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <text x="260" y="312" text-anchor="middle" font-size="11" fill="#6b7280">&#10005; no direct D &#8596; I transition</text>
+
+  <!-- nodes -->
+  <circle cx="260" cy="100" r="40" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2.5"/>
+  <text x="260" y="107" text-anchor="middle" font-size="20" font-weight="bold" fill="#1d4ed8">M</text>
+
+  <circle cx="140" cy="260" r="40" fill="#fef3c7" stroke="#b45309" stroke-width="2.5"/>
+  <text x="140" y="267" text-anchor="middle" font-size="20" font-weight="bold" fill="#b45309">D</text>
+
+  <circle cx="380" cy="260" r="40" fill="#fef3c7" stroke="#b45309" stroke-width="2.5"/>
+  <text x="380" y="267" text-anchor="middle" font-size="20" font-weight="bold" fill="#b45309">I</text>
+
+  <text x="260" y="352" text-anchor="middle" font-size="11" fill="#6b7280">M ends in a match/sub &#8226; D ends gapping "first" &#8226; I ends gapping "second"</text>
+  <text x="260" y="370" text-anchor="middle" font-size="11" fill="#6b7280">a gap only ever opens fresh from M, or extends from its own table</text>
+</svg>

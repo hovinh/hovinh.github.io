@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 420" font-family="Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="820" height="420" fill="#ffffff"/>
+  <text x="410" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#111827">From a grid to a hypercube: MULT's state space</text>
+
+  <!-- LEFT: pairwise grid -->
+  <text x="160" y="62" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">Pairwise (k = 2)</text>
+  <g stroke="#94a3b8" stroke-width="1.5">
+    <line x1="100" y1="120" x2="220" y2="120"/>
+    <line x1="100" y1="150" x2="220" y2="150"/>
+    <line x1="100" y1="180" x2="220" y2="180"/>
+    <line x1="100" y1="210" x2="220" y2="210"/>
+    <line x1="100" y1="240" x2="220" y2="240"/>
+    <line x1="100" y1="120" x2="100" y2="240"/>
+    <line x1="130" y1="120" x2="130" y2="240"/>
+    <line x1="160" y1="120" x2="160" y2="240"/>
+    <line x1="190" y1="120" x2="190" y2="240"/>
+    <line x1="220" y1="120" x2="220" y2="240"/>
+  </g>
+  <defs>
+    <marker id="ax" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <line x1="100" y1="255" x2="215" y2="255" stroke="#475569" stroke-width="1.5" marker-end="url(#ax)"/>
+  <text x="160" y="270" text-anchor="middle" font-size="11" fill="#6b7280">j (second)</text>
+  <line x1="85" y1="120" x2="85" y2="235" stroke="#475569" stroke-width="1.5" marker-end="url(#ax)"/>
+  <text x="70" y="180" text-anchor="middle" font-size="11" fill="#6b7280" transform="rotate(-90 70 180)">i (first)</text>
+
+  <text x="160" y="300" text-anchor="middle" font-size="13" fill="#111827">(n+1) &#215; (n+1) cells</text>
+  <text x="160" y="320" text-anchor="middle" font-size="13" fill="#111827">3 predecessors / cell</text>
+
+  <!-- ARROW between figures -->
+  <line x1="250" y1="180" x2="460" y2="180" stroke="#1d4ed8" stroke-width="2.5" marker-end="url(#ax)"/>
+  <text x="355" y="166" text-anchor="middle" font-size="12" fill="#1d4ed8" font-weight="600">+1 sequence</text>
+
+  <!-- RIGHT: oblique cube -->
+  <text x="640" y="62" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">Multiple (k = 3)</text>
+
+  <!-- back face -->
+  <g stroke="#94a3b8" stroke-width="1.5" fill="none">
+    <polygon points="590,210 730,210 730,70 590,70" fill="#f8fafc"/>
+  </g>
+  <!-- connectors -->
+  <g stroke="#94a3b8" stroke-width="1.5">
+    <line x1="520" y1="280" x2="590" y2="210"/>
+    <line x1="660" y1="280" x2="730" y2="210"/>
+    <line x1="660" y1="140" x2="730" y2="70"/>
+    <line x1="520" y1="140" x2="590" y2="70"/>
+  </g>
+  <!-- front face -->
+  <g stroke="#475569" stroke-width="2" fill="#dbeafe" fill-opacity="0.5">
+    <polygon points="520,280 660,280 660,140 520,140"/>
+  </g>
+  <!-- front-face subdivision (2D slice) -->
+  <g stroke="#93c5fd" stroke-width="1">
+    <line x1="566.7" y1="140" x2="566.7" y2="280"/>
+    <line x1="613.3" y1="140" x2="613.3" y2="280"/>
+    <line x1="520" y1="186.7" x2="660" y2="186.7"/>
+    <line x1="520" y1="233.3" x2="660" y2="233.3"/>
+  </g>
+  <!-- depth grid lines hinting at the 3rd axis -->
+  <g stroke="#93c5fd" stroke-width="1">
+    <line x1="566.7" y1="280" x2="636.7" y2="210"/>
+    <line x1="613.3" y1="280" x2="683.3" y2="210"/>
+    <line x1="566.7" y1="140" x2="636.7" y2="70"/>
+    <line x1="613.3" y1="140" x2="683.3" y2="70"/>
+  </g>
+  <!-- back face outline on top -->
+  <g stroke="#94a3b8" stroke-width="1.5" fill="none">
+    <polygon points="590,210 730,210 730,70 590,70"/>
+  </g>
+
+  <!-- axis labels -->
+  <text x="590" y="302" text-anchor="middle" font-size="11" fill="#6b7280">j</text>
+  <text x="500" y="215" text-anchor="middle" font-size="11" fill="#6b7280" transform="rotate(-90 500 215)">k</text>
+  <text x="612" y="95" text-anchor="middle" font-size="11" fill="#6b7280" font-style="italic">i (3rd sequence)</text>
+
+  <text x="640" y="330" text-anchor="middle" font-size="13" fill="#111827">(n+1)&#179; cells</text>
+  <text x="640" y="350" text-anchor="middle" font-size="13" fill="#111827">2&#179;&#8722;1 = 7 predecessors / cell</text>
+
+  <text x="410" y="400" text-anchor="middle" font-size="11" fill="#9ca3af">each extra sequence multiplies the grid, not adds to it &#8212; exact DP is only tractable for small k</text>
+</svg>
