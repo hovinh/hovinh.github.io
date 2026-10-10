@@ -155,3 +155,51 @@ The throughline is to **one bolded idea**. Two to four lessons that recur.
 
 The sentence I want the reader to keep.
 ````
+
+## LinkedIn Post
+
+Every post gets a LinkedIn share once it is live. Draft it from the finished post, not from scratch: the post's intro and Summary already hold most of the material.
+
+### Process
+
+1. Reread the intro and the Summary. Pick the hook, the one idea that makes the post work, and one extra the post covers that tutorials usually skip.
+2. Draft with the structure below, reusing the post's own phrasing where it is strong, so the two read as one voice.
+3. Cut to four or five paragraphs. Merge short paragraphs; do not give every sentence its own line.
+4. Run the same checks as the post: no em-dashes, plain words, honest about what was run.
+5. Post it, then add the blog link as the first comment.
+
+### Structure
+
+1. **Opening line**: the post title, or a follow-up opener when the post is part of a series ("Following up on the last post, the blog series I mentioned is officially underway.").
+2. **Hook**: the problem or observation from the intro, in first person, three or four sentences.
+3. **The core idea**: what the post proposes. For a sequence (stages, axes, steps), use a short numbered list (`1)`, `2)`, `3)`) or `-` bullets; otherwise keep it as prose. Define one or two terms in plain words if the audience may not know them.
+4. **One more thing**: what else the post covers that readers will not find in a tutorial, plus anything that lowers the barrier to trying it (free tier, skill file, repo).
+5. **Closing question** that invites people to share their own practice ("Curious how others handle this: ...?").
+6. **Last line**: "Link to the post is in the comments."
+
+### Format
+
+- Plain text only. LinkedIn does not render Markdown, so no `**bold**`, headings or inline code.
+- About 200 to 350 words.
+- No hashtags, emojis or calls to like and share.
+
+### Template
+
+```text
+<Post title>
+
+<Hook: the familiar situation, and why it is harder than it looks. 3 to 4 sentences.>
+
+<The core idea in one or two sentences, then the sequence if there is one:>
+1) <first stage or step>
+2) <second>
+3) <third>
+
+<The one rule or insight that makes it work, and what it buys you.>
+
+The post also covers <the part tutorials skip>. <What lowers the barrier: free tier, repo, skill file.>
+
+Curious how others handle this: <a question about the reader's own practice>?
+
+Link to the post is in the comments.
+```
