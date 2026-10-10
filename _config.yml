@@ -262,6 +262,7 @@ exclude:
   - _js
   - _plugins
   - .sass-cache
+  - blog-style.md
 include:
   - LICENSE.md
 
