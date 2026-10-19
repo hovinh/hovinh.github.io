@@ -1,6 +1,6 @@
 # Blog Style Guide
 
-Conventions for posts in `blog/_posts/`, distilled from the 2026 posts ("Web Dev for Data People" is the cleanest reference). Follow these so new posts read as one blog. A copy-paste skeleton is at the bottom.
+Conventions for posts in `blog/_posts/`, distilled from the 2026 posts. "Web Dev for Data People" is the cleanest reference for a survey or decision post; "The Model Only Asks" is the reference for a post that explains how something works (see [Explaining How Something Works](#explaining-how-something-works)). Follow these so new posts read as one blog. A copy-paste skeleton is at the bottom.
 
 ## File and front matter
 
@@ -26,10 +26,10 @@ comments: true
 ## Structure
 
 1. **Intro, 1 to 4 short paragraphs, before the table of contents.** Cover, in this order:
-   - Why the post exists (a personal trigger or a problem I ran into). Open with a concrete scene or observation, not a definition ("Almost every analysis I have worked on ends in the same small moment: someone needs to *see* it.").
+   - Why the post exists (a personal trigger or a problem I ran into). Open with a concrete scene or observation, not a definition ("Almost every analysis I have worked on ends in the same small moment: someone needs to *see* it."). For an explainer, admitting what I could not explain works well ("if you had asked me what actually happens ..., I would have waved my hands. So I built a small one to find out.").
    - What the reader gets (the main ideas or artifacts).
    - How the post is organised, in a sentence or two ("This post walks through that choice in four moves. First, ... Second, ... Last, ...").
-   - Prerequisites, as one plain sentence inside the intro (no separate `**Prerequisite**` line).
+   - Prerequisites, as one plain sentence inside the intro (no separate `**Prerequisite**` line). State the real minimum, concretely: "You only need to read Python and to have called a chat API once; no agent framework is used or assumed."
    - The companion repo, if there is one, as an inline link in the intro.
 2. **Table of contents**: a bullet list of anchor links to the `##` sections, placed right after the intro. No "Table of Contents" heading. Sub-bullets are allowed for long posts.
 3. **Body**: one `##` per major idea, `###` for sub-parts. Headings are short phrases with a hook ("Two Gaps That Bite Later", "One Table, Three Questions"), not generic labels. No section numbers, except for a real sequence ("Stage 1: ...", "Use Case 2: ...").
@@ -37,17 +37,18 @@ comments: true
 
 ### Inside a section
 
-- Open each `##` with one or two sentences that frame the question the section answers, then the detail.
+- Open each `##` with one or two sentences that frame the question the section answers, then the detail. Write it as the question the reader would actually ask, ideally one I got wrong first ("The first question is the one I had wrong for longest: where does the conversation *live*?").
 - Use a **running example** for the whole post, introduced in bold in the intro or first section ("As the use case, I picked **NYC taxi fare prediction**").
 - For a sequence of steps or stages, use a numbered list with a bold label ending in a period: `1. **Fully local.** Code and data on the laptop.`
 - To split a long section without another heading, start paragraphs with a bold lead-in: `**Feature engineering.** For each day ...`
-- End major sections on the practical consequence: "My default for anyone working on a laptop: ...".
+- End major sections on the practical consequence: "My default for anyone working on a laptop: ...", or "The practical consequence: **write error messages for the model, not for yourself.**".
+- Link sections to each other: promise what is coming ("You will see this happen for real in Stage 6") and point back when it pays off ("Compare it with the answer the model wrote in ...").
 
 ### Summary or Closing Thought
 
 - Name the throughline in bold in the first sentence ("The throughline is to **decompose before you choose**.").
 - Then the two to four lessons, as a short paragraph or a bullet list with bold lead-ins.
-- Optionally one line on what comes next or where the code lives. The final sentence is the idea I want the reader to keep.
+- Optionally one line on what comes next or where the code lives. The final sentence is the idea I want the reader to keep. If the post has a central analogy, the last sentence can close it ("Once you have seen the note go through the slot, you cannot unsee it: ...").
 
 ## Tone
 
@@ -59,6 +60,21 @@ comments: true
 - Bold key terms on first use; use italics for light emphasis (*see*, *lightest*).
 - Use `>` blockquotes for the one rule or definition worth remembering, at most one or two per post.
 - British spelling (organised, behaviour, recognise).
+
+## Explaining How Something Works
+
+For posts that open up a mechanism (a library, a protocol, an algorithm), the aim is the Feynman test: a reader who knows the basics could rebuild the idea from the post alone. These habits get there:
+
+- **Whole picture first.** Show the full trip in one figure and a short numbered list before any section zooms in, so every later detail has a place to land.
+- **One analogy, pinned down.** Pick a single physical image (a closed room with a slot in the door), introduce it once, and fix its terms: "From here on, a **note** always means that second kind". Use those terms the same way to the end; do not switch to a synonym.
+- **Plain names over jargon, with the reason.** When my word beats the official one, say both and why: "I call this list the **transcript**. The API docs call it the conversation history, which is accurate but undersells it."
+- **Play computer.** Push one real input through the code and show the actual value after each step (`'4.7'` becomes `Decimal('4.7')`, `"*"` becomes `Operation.MULTIPLY`). Real values, not placeholders.
+- **Say what it is not.** Strip the mystery out loud: "That is the whole trick.", "Chaining is not a feature in the code. It is the model being handed a longer transcript each time."
+- **Name the surprise.** Flag the parts that changed my mind or are easy to miss: "Three things about this menu surprised me.", "This is the stage that changed my mental model."
+- **Break it on purpose.** Show what happens with bad input, ideally as a table of inputs and what comes back, then one real run where the failure is recovered.
+- **Show real traces, with provenance.** Say which model or version, the date, how the traces were captured, and how cuts are marked ("`...` or `…` marks text I cut").
+- **Costs where they arise.** Mention a cost or limit in the section that causes it (token growth in the transcript section, the round cap in the loop section), not in a caveats section at the end.
+- **Land on a short sentence.** After a long explanation, compress it to a few words the reader can carry: "A tool call is a note.", "That is what 'remembering' means here: reading."
 
 ## Punctuation
 
@@ -102,6 +118,8 @@ or `<img src="/assets/blog/YYYY-MM-DD/name.png" alt="Describe the image" />` for
 - [ ] No em-dashes (search for `—`).
 - [ ] Figures use `/assets/blog/YYYY-MM-DD/` paths, are numbered and captioned, and have alt text.
 - [ ] Every claim about a tool or version links to its source.
+- [ ] Every term or analogy word is defined once and used the same way throughout.
+- [ ] Traces and outputs say where they came from (model or version, date) and how cuts are marked.
 - [ ] No trailing references list; post ends on the Summary or Closing Thought.
 
 ## Skeleton

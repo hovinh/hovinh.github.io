@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" width="900" height="400" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#374151"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="900" height="400" rx="14" fill="#ffffff" stroke="#d1d5db"/>
+  <text x="24" y="36" font-size="18" font-weight="700" fill="#111827">The transcript grows every round</text>
+  <text x="24" y="56" font-size="12" fill="#6b7280">Real run of &quot;Work out 120 + 9 + 9&quot; and one follow-up. The model keeps nothing between requests; it is sent everything, every time.</text>
+  <text x="170" y="90" font-size="12" fill="#6b7280" font-weight="600">What the model is sent</text>
+  <text x="620" y="90" font-size="12" fill="#6b7280" font-weight="600" text-anchor="end">Prompt tokens</text>
+  <text x="650" y="90" font-size="12" fill="#6b7280" font-weight="600">What it sends back</text>
+  <text x="24" y="124" font-size="12" fill="#111827" font-weight="600">Turn 1, request 1</text>
+  <rect x="170" y="108" width="92" height="24" rx="5" fill="#e5e7eb" stroke="#6b7280" stroke-opacity="0.5"/>
+  <rect x="266" y="108" width="30" height="24" rx="5" fill="#bfdbfe" stroke="#1d4ed8" stroke-opacity="0.5"/>
+  <text x="620" y="125" font-size="13" fill="#111827" font-weight="600" text-anchor="end">1,497</text>
+  <rect x="650" y="108" width="226" height="24" rx="5" fill="#fde68a" stroke="#b45309" stroke-opacity="0.5"/>
+  <text x="662" y="125" font-size="12" fill="#111827">note: 120 + 9</text>
+  <text x="24" y="170" font-size="12" fill="#111827" font-weight="600">Turn 1, request 2</text>
+  <rect x="170" y="154" width="92" height="24" rx="5" fill="#e5e7eb" stroke="#6b7280" stroke-opacity="0.5"/>
+  <rect x="266" y="154" width="30" height="24" rx="5" fill="#bfdbfe" stroke="#1d4ed8" stroke-opacity="0.5"/>
+  <rect x="300" y="154" width="30" height="24" rx="5" fill="#fde68a" stroke="#b45309" stroke-opacity="0.5"/>
+  <rect x="334" y="154" width="30" height="24" rx="5" fill="#bbf7d0" stroke="#15803d" stroke-opacity="0.5"/>
+  <text x="620" y="171" font-size="13" fill="#111827" font-weight="600" text-anchor="end">1,703</text>
+  <rect x="650" y="154" width="226" height="24" rx="5" fill="#fde68a" stroke="#b45309" stroke-opacity="0.5"/>
+  <text x="662" y="171" font-size="12" fill="#111827">note: 129 + 9</text>
+  <text x="24" y="216" font-size="12" fill="#111827" font-weight="600">Turn 1, request 3</text>
+  <rect x="170" y="200" width="92" height="24" rx="5" fill="#e5e7eb" stroke="#6b7280" stroke-opacity="0.5"/>
+  <rect x="266" y="200" width="30" height="24" rx="5" fill="#bfdbfe" stroke="#1d4ed8" stroke-opacity="0.5"/>
+  <rect x="300" y="200" width="30" height="24" rx="5" fill="#fde68a" stroke="#b45309" stroke-opacity="0.5"/>
+  <rect x="334" y="200" width="30" height="24" rx="5" fill="#bbf7d0" stroke="#15803d" stroke-opacity="0.5"/>
+  <rect x="368" y="200" width="30" height="24" rx="5" fill="#fde68a" stroke="#b45309" stroke-opacity="0.5"/>
+  <rect x="402" y="200" width="30" height="24" rx="5" fill="#bbf7d0" stroke="#15803d" stroke-opacity="0.5"/>
+  <text x="620" y="217" font-size="13" fill="#111827" font-weight="600" text-anchor="end">1,909</text>
+  <rect x="650" y="200" width="226" height="24" rx="5" fill="#e9d5ff" stroke="#7e22ce" stroke-opacity="0.5"/>
+  <text x="662" y="217" font-size="12" fill="#111827">answer: … 138</text>
+  <text x="24" y="274" font-size="12" fill="#111827" font-weight="600">Turn 2, request 1</text>
+  <rect x="170" y="258" width="92" height="24" rx="5" fill="#e5e7eb" stroke="#6b7280" stroke-opacity="0.5"/>
+  <rect x="266" y="258" width="30" height="24" rx="5" fill="#bfdbfe" stroke="#1d4ed8" stroke-opacity="0.5"/>
+  <rect x="300" y="258" width="30" height="24" rx="5" fill="#fde68a" stroke="#b45309" stroke-opacity="0.5"/>
+  <rect x="334" y="258" width="30" height="24" rx="5" fill="#bbf7d0" stroke="#15803d" stroke-opacity="0.5"/>
+  <rect x="368" y="258" width="30" height="24" rx="5" fill="#fde68a" stroke="#b45309" stroke-opacity="0.5"/>
+  <rect x="402" y="258" width="30" height="24" rx="5" fill="#bbf7d0" stroke="#15803d" stroke-opacity="0.5"/>
+  <rect x="436" y="258" width="30" height="24" rx="5" fill="#e9d5ff" stroke="#7e22ce" stroke-opacity="0.5"/>
+  <rect x="470" y="258" width="30" height="24" rx="5" fill="#bfdbfe" stroke="#1d4ed8" stroke-opacity="0.5"/>
+  <text x="620" y="275" font-size="13" fill="#111827" font-weight="600" text-anchor="end">2,032</text>
+  <rect x="650" y="258" width="226" height="24" rx="5" fill="#fde68a" stroke="#b45309" stroke-opacity="0.5"/>
+  <text x="662" y="275" font-size="12" fill="#111827">note: 129 + 99</text>
+  <text x="24" y="320" font-size="12" fill="#111827" font-weight="600">Turn 2, request 2</text>
+  <rect x="170" y="304" width="92" height="24" rx="5" fill="#e5e7eb" stroke="#6b7280" stroke-opacity="0.5"/>
+  <rect x="266" y="304" width="30" height="24" rx="5" fill="#bfdbfe" stroke="#1d4ed8" stroke-opacity="0.5"/>
+  <rect x="300" y="304" width="30" height="24" rx="5" fill="#fde68a" stroke="#b45309" stroke-opacity="0.5"/>
+  <rect x="334" y="304" width="30" height="24" rx="5" fill="#bbf7d0" stroke="#15803d" stroke-opacity="0.5"/>
+  <rect x="368" y="304" width="30" height="24" rx="5" fill="#fde68a" stroke="#b45309" stroke-opacity="0.5"/>
+  <rect x="402" y="304" width="30" height="24" rx="5" fill="#bbf7d0" stroke="#15803d" stroke-opacity="0.5"/>
+  <rect x="436" y="304" width="30" height="24" rx="5" fill="#e9d5ff" stroke="#7e22ce" stroke-opacity="0.5"/>
+  <rect x="470" y="304" width="30" height="24" rx="5" fill="#bfdbfe" stroke="#1d4ed8" stroke-opacity="0.5"/>
+  <rect x="504" y="304" width="30" height="24" rx="5" fill="#fde68a" stroke="#b45309" stroke-opacity="0.5"/>
+  <rect x="538" y="304" width="30" height="24" rx="5" fill="#bbf7d0" stroke="#15803d" stroke-opacity="0.5"/>
+  <text x="620" y="321" font-size="13" fill="#111827" font-weight="600" text-anchor="end">2,249</text>
+  <rect x="650" y="304" width="226" height="24" rx="5" fill="#e9d5ff" stroke="#7e22ce" stroke-opacity="0.5"/>
+  <text x="662" y="321" font-size="12" fill="#111827">answer: … 228</text>
+  <line x1="24" y1="234" x2="876" y2="234" stroke="#d1d5db" stroke-dasharray="4 4"/>
+  <text x="24" y="251" font-size="11" fill="#6b7280">Follow-up: &quot;And if the last one was 99 instead of 9?&quot;</text>
+  <rect x="24" y="368" width="16" height="14" rx="3" fill="#e5e7eb" stroke="#6b7280" stroke-opacity="0.5"/>
+  <text x="46" y="380" font-size="12" fill="#111827">system prompt + tool menu</text>
+  <rect x="231.0" y="368" width="16" height="14" rx="3" fill="#bfdbfe" stroke="#1d4ed8" stroke-opacity="0.5"/>
+  <text x="253.0" y="380" font-size="12" fill="#111827">your question</text>
+  <rect x="361.68" y="368" width="16" height="14" rx="3" fill="#fde68a" stroke="#b45309" stroke-opacity="0.5"/>
+  <text x="383.68" y="380" font-size="12" fill="#111827">the model&#x27;s note (tool call)</text>
+  <rect x="587.76" y="368" width="16" height="14" rx="3" fill="#bbf7d0" stroke="#15803d" stroke-opacity="0.5"/>
+  <text x="609.76" y="380" font-size="12" fill="#111827">tool result</text>
+  <rect x="705.72" y="368" width="16" height="14" rx="3" fill="#e9d5ff" stroke="#7e22ce" stroke-opacity="0.5"/>
+  <text x="727.72" y="380" font-size="12" fill="#111827">the model&#x27;s answer</text>
+</svg>
